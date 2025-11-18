@@ -1,0 +1,108 @@
+/*
+Signature Image Style
+This file contains styles for the signature image container and image.
+It ensures the image is responsive and maintains its aspect ratio.
+ */
+
+/* Example:
+
+		<div class="signature-image-container">
+		<img
+			class="signature-image"
+			src="https://..."
+			alt="Sunrise Over Daytona Beach, Florida"
+		/>
+		</div>
+		<div class="signature-caption">
+		Sunrise Over Daytona Beach, Florida
+		</div>
+*/
+
+.signature-image {
+	aspect-ratio: 16 / 9;
+	border: 1px solid #007db8;
+	border-radius: 5px;
+	box-sizing: border-box;
+	display: block;
+	height: auto;
+	object-fit: cover;
+	object-position: center center;
+	overflow: hidden;
+	width: auto;
+}
+
+.signature-image__caption {
+	color: rgb(0 0 0 / 87.5%);
+	font-size: 0.875em;
+	margin: auto;
+	padding: 0.1em 0;
+	text-align: center;
+}
+
+.signature-image__caption a:hover {
+	color: rgb(0 125 184 / 100%);
+}
+
+/* Signature image styles added to video
+   Apply the same subtle border treatment to embedded YouTube iframes
+   without affecting size, alignment, or aspect behavior. */
+iframe[src*='youtube.com'],
+iframe[src*='youtu.be'],
+.fluidvids .fluidvids-item[src*='youtube.com'],
+.fluidvids .fluidvids-item[src*='youtu.be'] {
+	border: 1px solid rgb(0 125 184 / 100%);
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+/* Ensure border applies inside FooBox overlays as well */
+.fbx-container iframe[src*='youtube.com'],
+.fbx-container iframe[src*='youtu.be'] {
+	border: 1px solid rgb(0 125 184 / 100%);
+	border-radius: 5px;
+}
+
+.signature-image-heading h3 {
+	font-size: 1.38em;
+	margin: -1rem 0 0;
+	padding: 0 1rem 0.5rem;
+	text-align: center;
+}
+
+.signature-image-heading h3:hover {
+	color: rgb(0 125 184 / 100%);
+}
+
+.signature-image-container {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	margin: 0 1rem;
+	max-width: 400px;
+	position: relative;
+}
+
+.signature-image-container.alignleft {
+	flex: unset;
+	float: left;
+	margin-left: 0;
+	padding: 0 1rem 1rem 0; /* right + bottom padding */
+}
+
+.signature-image-container.alignright {
+	flex: unset;
+	float: right;
+	margin-right: 0;
+	padding: 0 0 1rem 1rem; /* left + bottom padding */
+}
+
+.signature-image-container a {
+	text-decoration: none;
+}
+
+/* Breadcrumb bar bottom border */
+.breadcrumb {
+	border-bottom: 1px solid rgb(0 0 0 / 100%);
+	margin-bottom: 1rem;
+	padding-bottom: 0.5rem;
+}

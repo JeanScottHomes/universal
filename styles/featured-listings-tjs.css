@@ -1,0 +1,401 @@
+/*
+ * 🔹 TJS Featured Listings CPT
+ * Header/info bar styling is sourced via grouped selectors in:
+ *   universal/styles/breadcrumbs-h1.css
+ * We intentionally avoid duplicating background/border/spacing rules here.
+ */
+
+/* Background cleanup — ensure featured sections are transparent over site beige */
+.single-idxc_featlist .entry,
+.ao_listing_layout2,
+.ao_listing_layout2 .isc_section,
+.ao_listing_layout2 .isc_content_wrap,
+.ao_listing_layout2 .isc_gallery_container,
+.ao_listing_layout2 .isc_agent_card_container {
+	background: transparent !important;
+}
+
+.ao_listing_layout2 .isc_color1 {
+	margin-bottom: 2rem;
+}
+
+/* Map container should follow standard content width (not full-bleed) */
+.ao_listing_layout2 #map.isc_map_location.iul_full_width {
+	border: 1px solid rgb(0 125 184);
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	left: auto;
+	margin: 0 auto 1rem;
+	max-width: 1080px;
+	position: static;
+	right: auto;
+	width: 100%;
+}
+
+.ao_listing_layout2 #map.isc_map_location.iul_full_width iframe {
+	aspect-ratio: 16 / 9;
+	border: 0;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.ao_listing_layout2 .isc_details_col .isc_item {
+	margin: 4px 0;
+}
+
+.ao_listing_layout2 .isc_details_col .isc_item .isc_item_label {
+	font-weight: 600;
+}
+
+/* Details grid two-column layout */
+.ao_listing_layout2 .isc_details_grid {
+	display: grid;
+	gap: 16px 32px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.ao_listing_layout2 .isc_details_grid h3 {
+	font-size: 38px;
+	margin: 0 0 3rem;
+}
+
+.ao_listing_layout2 .isc_details_grid h4 {
+	font-size: 20px;
+	margin: 1rem 0;
+}
+
+/* Breadcrumb color hygiene in featured header: default black, blue on hover, current in blue */
+.ao_listing_layout2 .isc_info_bar .breadcrumb,
+.ao_listing_layout2 .isc_info_bar .breadcrumb a {
+	color: #000;
+}
+
+.ao_listing_layout2 .isc_info_bar .breadcrumb a:hover {
+	color: color-mix(in srgb, rgb(25 153 194), black 38%);
+}
+
+.ao_listing_layout2 .isc_info_bar .breadcrumb .breadcrumb-current {
+	color: color-mix(in srgb, rgb(25 153 194), black 38%);
+}
+
+.ao_listing_layout2 .isc_info_bar {
+	margin: 0 auto;
+	max-width: 1100px; /* mirrors .breadcrumbs-h1-bar__content */
+	padding: 1rem;
+}
+
+/* Match inner/content spacing for in featured-listings-tjs.css */
+.ao_listing_layout2 .isc_info_bar_container > .wrap {
+	padding: 0 1rem; /* mirrors .breadcrumbs-h1-bar__inner */
+}
+
+.ao_listing_layout2 .isc_location address.isc_address {
+	font-style: italic;
+	margin: 0 0 0.5rem;
+}
+
+.ao_listing_layout2 .isc_location address.isc_address h3 {
+	font-size: 1.375rem;
+	font-style: italic;
+	font-weight: 500;
+	margin: 0 0 0.75rem;
+}
+
+.ao_listing_layout2 .isc_location .isc_location_details {
+	display: none;
+}
+
+.ao_listing_layout2 .isc_map_location {
+	text-align: center;
+}
+
+.ao_listing_layout2 .isc_map_location iframe {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.ao_listing_layout2 .isc_property_information .isc_label {
+	font-size: 32px;
+	min-width: 300px; /* 300px is IDX-C setting. TJS */
+	padding: 0 0 0 2rem;
+
+	/* merged from duplicate selector */
+}
+
+.ao_listing_layout2 .isc_section.isc_property_information {
+	margin-bottom: 0;
+}
+
+/* Ensure legacy multi-column styles don't split our details grid */
+.ao_listing_layout2 .isc_section.isc_property_information.isc_features .isc_content {
+	column-count: 1 !important;
+	column-gap: 0;
+}
+
+.ao_listing_layout2 .isc_section.isc_property_information.isc_location div.isc_content_wrap {
+	display: flex;
+	justify-content: center;
+	padding: 0 !important; /* override global 2rem */
+}
+
+.div.isc_content_wrap {
+	padding: 0 0 0 2rem;
+}
+
+.div.isc_detail_items span.isc_number,
+.div.isc_detail_items span.isc_label {
+	display: block;
+	text-align: center;
+}
+
+.div.ui-grid.ui-grid-item {
+	padding: 0 !important;
+}
+
+.isc_content {
+	padding-bottom: 2rem;
+}
+
+.isc_details {
+	color: var(--main-primary-color-text-dark);
+	font-family: 'Cormorant Garamond', serif;
+	line-height: 1;
+	margin-left: 0;
+	max-width: 61.8%;
+}
+
+/* Note: .ao_listing_layout2 .isc_info_bar overrides shared properties (e.g., margin/padding) of .isc_info_bar via higher specificity */
+.isc_info_bar {
+	color: var(--main-primary-color-text-dark);
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 1;
+	margin: 1rem;
+	text-align: center;
+}
+
+.isc_info_bar .breadcrumb,
+.isc_info_bar h1 {
+	justify-content: flex-start;
+	margin-left: 0;
+	text-align: left;
+	width: 100%;
+}
+
+.isc_price {
+	align-items: center;
+	color: var(--main-primary-color-text-dark);
+	display: flex;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 42px;
+	font-weight: 300;
+	line-height: 1;
+	margin-left: 0;
+	min-width: 33%;
+	text-align: left;
+}
+
+.isc_item_value {
+	align-items: center;
+	display: flex;
+}
+
+.post-views.content-post {
+	padding: 2rem 0 2rem 1rem;
+}
+
+.site-inner,
+.wrap {
+	margin: 0 auto;
+	max-width: 1100px;
+	position: relative;
+}
+
+span.isc_label {
+	color: var(--main-primary-color-text-dark);
+	display: inline-block;
+	font-family: Montserrat, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.25;
+	text-align: left;
+}
+
+span.isc_number {
+	color: var(--main-primary-color-text-dark);
+	display: inline-block;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 1.25;
+	text-align: left;
+}
+
+/* Page specific styles */
+
+.ao_listing_layout2 .isc_info_bar {
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: left;
+}
+
+.ao_listing_layout2 .isc_detail_items div.isc_beds {
+	padding-left: 0;
+}
+
+.single-idxc_featlist h1 {
+	display: none;
+}
+
+/* Ensure H1 inside the global breadcrumbs bar is visible on this template */
+.single-idxc_featlist .breadcrumbs-h1-bar__title {
+	display: block;
+}
+
+.single-idxc_featlist .isc_info_bar h1 {
+	display: block;
+	max-width: 100%;
+	min-width: 100%;
+	width: 100%;
+}
+
+.breadcrumb {
+	font-family: var(--main-primary-font);
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+.content-sidebar-wrap .content {
+	padding-top: 0 !important;
+}
+
+.entry {
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.galleria-stage .galleria-image img {
+	height: 100% !important;
+	object-fit: cover;
+	width: 100% !important;
+}
+
+/* TJS 2025-09-02 — Lite YouTube embed minimal styles (renamed to youtube-lite-*) */
+.youtube-lite-embed {
+	aspect-ratio: 16 / 9;
+	cursor: pointer;
+	display: block;
+	max-width: 100%;
+	position: relative;
+	width: 100%;
+
+	/* keep 16:9 while iframe loads */
+}
+
+.youtube-lite-thumb {
+	border: 1px solid rgb(0 125 184 / 100%);
+	border-radius: 5px;
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.youtube-lite-playbtn {
+	background: rgb(0 0 0 / 55%);
+	border-radius: 50%;
+	color: #fff;
+	font-size: 28px;
+	height: 64px;
+	left: 50%;
+	line-height: 64px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 64px;
+}
+
+.video_images_control_on {
+	border-bottom: 2px solid black;
+}
+
+.nextgen_pro_sidescroll.nextgen_pro_sidescroll_open {
+	padding-top: 0;
+}
+
+#video_images_wrap {
+	flex-grow: 1;
+	max-width: 75%;
+}
+
+#video_images_content_01 #video {
+	/* TJS 2025-09-02: Make video container full width and centered */
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	min-width: 100%;
+	width: 100%;
+}
+
+@media only screen and (width <=1024px) {
+	#video_images_wrap {
+		max-width: 100%;
+	}
+
+	#video_images_content_01 #video {
+		max-width: 100%;
+		min-width: 100%;
+		width: 100%;
+	}
+}
+
+/* Match inner/content spacing for in featured-listings-tjs.css */
+.ao_listing_layout2 .isc_info_bar_container > .wrap {
+	padding: 0 1rem; /* mirrors .breadcrumbs-h1-bar__inner */
+}
+
+.ao_listing_layout2 .isc_info_bar {
+	margin: 0 auto;
+	max-width: 1100px; /* mirrors .breadcrumbs-h1-bar__content */
+	padding: 1rem;
+}
+
+@media (width <= 640px) {
+	.ao_listing_layout2 .isc_details_grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (width <= 767px) {
+	.isc_details {
+		font-size: 20px;
+		line-height: 1.4;
+		margin-left: 0;
+		text-align: left;
+	}
+
+	.isc_info_bar {
+		font-size: 22px;
+		line-height: 1.4;
+	}
+
+	.isc_price {
+		font-size: 22px;
+		line-height: 1.4;
+		width: 100%;
+	}
+
+	span.isc_label {
+		font-size: 16px;
+	}
+
+	span.isc_number {
+		font-size: 24px;
+	}
+}

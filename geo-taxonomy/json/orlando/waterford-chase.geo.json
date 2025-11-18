@@ -1,0 +1,15 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"name": "Waterford Chase"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [ [-81.1683298,28.5476939] ]
+        ]
+      }
+    }
+  ]
+}

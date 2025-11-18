@@ -1,0 +1,99 @@
+/* Shared styling for breadcrumb + info bar containers */
+
+.breadcrumbs-h1-bar,
+.ao_listing_layout2 .isc_info_bar_container {
+	background-color: color-mix(in srgb, rgb(155 212 222), white 68%);
+	border-block: 1px solid color-mix(in srgb, rgb(25 153 194), black 100%);
+}
+
+/* Breadcrumb Bar — sitewide */
+.breadcrumbs-h1-bar {
+	left: 50%;
+	margin: 1px -50vw 1rem;
+	max-width: 100vw;
+	position: relative;
+	right: 50%;
+	width: 100vw;
+} 
+
+/* Inner wrappers and content spacing */
+.breadcrumbs-h1-bar__content {
+	margin: 0 auto;
+	max-width: 1100px;
+	padding: 1rem;
+}
+
+.breadcrumbs-h1-bar__inner {
+	padding: 0 1rem;
+}
+
+.breadcrumbs-h1-bar__wrap {
+	box-sizing: border-box;
+	margin: 0 auto 1rem;
+	max-width: 1340px;
+	padding: 0 1rem;
+	position: relative;
+}
+
+/* BREADCRUMBS */
+
+/* Keep earlier breadcrumb links default (inherit/black) */
+.breadcrumbs-h1-bar__trail a,
+.ao_listing_layout2 .isc_info_bar .breadcrumb a {
+	color: inherit;
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+/* Blue starts at the current crumb (address) */
+
+/* TJS 2025-09-02: Remove legacy black underline coming from signature-image.css */
+.ao_listing_layout2 .isc_info_bar .breadcrumb {
+	border: 0 !important;
+	margin-bottom: 0;
+	padding-bottom: 0; /* keep spacing tight; the bar handles its own borders */
+}
+
+.breadcrumbs-h1-bar__trail a,
+.ao_listing_layout2 .isc_info_bar .breadcrumb a {
+	text-decoration: none;
+}
+
+/* Featured Listings breadcrumb links: default color; only blue on hover */
+.ao_listing_layout2 .isc_info_bar .breadcrumb a {
+	color: inherit;
+}
+
+.breadcrumb-sep {
+	color: inherit; /* keep separators black */
+	margin: 0 0.25em;
+}
+
+.breadcrumb-current {
+	color: color-mix(in srgb, rgb(25 153 194), black 38%);
+}
+
+.breadcrumbs-h1-bar__trail a:hover,
+.ao_listing_layout2 .isc_info_bar .breadcrumb a:hover {
+	color: color-mix(in srgb, rgb(25 153 194), black 38%);
+	text-decoration: none;
+}
+
+/* Blue starts at the current crumb text only */
+.breadcrumbs-h1-bar__trail span.breadcrumb-current,
+.ao_listing_layout2 .isc_info_bar .breadcrumb span.breadcrumb-current {
+	color: color-mix(in srgb, rgb(25 153 194), black 38%) !important;
+}
+
+/* Reset the separators so they don't inherit the blue */
+.breadcrumbs-h1-bar__trail span.breadcrumb-current::before,
+.ao_listing_layout2 .isc_info_bar .breadcrumb span.breadcrumb-current::before {
+	color: inherit;
+}
+
+/* H1 */
+.breadcrumbs-h1-bar__title,
+/* Featured Listings title inside info bar */
+.ao_listing_layout2 .isc_info_bar h1.entry-title {
+	margin: 0;
+}

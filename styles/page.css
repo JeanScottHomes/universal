@@ -1,0 +1,401 @@
+/* SITEWIDE DEFAULT PAGE WRAP (page.php) */
+
+/* TODO: Have the images on page.php move center justified and text below just like on front-sitewide-page-content.php
+*/
+
+/** SCROLLING ADJUSTMENT FOR ANCHOR TEXT:
+ *  • #homes-for-sale
+ *  • #breadcrumb-bar
+ *
+ * AND FOR THE TEMPLATES:
+ *  • sitewide-page.php
+ *  • home-styles-for-sale.php
+ */
+
+/* Smooth scrolling for in-page anchors */
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: var(--scroll-pad, 0);
+}
+
+body.page-template-sitewide-page,
+body.page-template-home-styles-for-sale {
+	--scroll-pad: 0px; /* neutral default, overrides per-anchor below */
+}
+
+/** PER ANCHOR ADJUSTMENT
+ * To stop element lower on the page = Negative scroll-margin-top values
+ * To stop element higher on the page = Positive scroll-margin-top values
+ * Adjust per anchor to account for sticky headers or spacing needs
+ */
+
+body.page-template-sitewide-page #homes-for-sale,
+body.page-template-home-styles-for-sale #homes-for-sale {
+	scroll-margin-top: 0;
+}
+
+body.page-template-sitewide-page #breadcrumb-bar,
+body.page-template-home-styles-for-sale #breadcrumb-bar {
+	scroll-margin-top: 1px;
+}
+
+/** END SCROLLING AJUSTMENT */
+
+/* Anchor target for Central Florida Cities heading 
+TODO: Adjust this margin */
+body.page-template-sitewide-page #central-florida-cities {
+	scroll-margin-top: 0;
+}
+
+/* ONE HIGH-IMPACT IMPROVEMENT: Normalize embedded video sizing */
+
+/* Makes YouTube/Vimeo iframes and <video> responsive with consistent aspect */
+body.page-template-sitewide-page .entry-content iframe[src*='youtube'],
+body.page-template-sitewide-page .entry-content iframe[src*='vimeo'],
+body.page-template-home-styles-for-sale .entry-content iframe[src*='youtube'],
+body.page-template-home-styles-for-sale .entry-content iframe[src*='vimeo'] {
+	aspect-ratio: 16 / 9;
+	border: 0;
+	display: block;
+	height: auto;
+	margin: 1rem auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+body.page-template-sitewide-page .entry-content video,
+body.page-template-home-styles-for-sale .entry-content video {
+	aspect-ratio: 16 / 9;
+	display: block;
+	height: auto;
+	margin: 1rem auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+/* Gutenberg wrapper normalization */
+body.page-template-sitewide-page .wp-block-embed__wrapper iframe,
+body.page-template-home-styles-for-sale .wp-block-embed__wrapper iframe {
+	aspect-ratio: 16 / 9;
+	height: auto !important;
+	width: 100% !important;
+}
+
+.sitewide-page-spacer {
+	background-color: rgb(0 125 184 / 15%);
+	border: 1px solid rgb(0 125 184 / 100%);
+	border-radius: 5px;
+	margin: 2rem auto 1rem;
+	max-width: 100%;
+	padding: 2rem;
+
+	/* background-color: rgba(255, 255, 0, 0.025); */
+}
+
+/* *** FUTURE USE *** */
+
+/* CITY PAGE TABS */
+.sitewide-page-tabs {
+	align-items: center;
+	display: grid;
+
+	/* 2/3 : 1/3 split */
+	gap: 1rem;
+	grid-template-columns: 2fr 1fr;
+}
+
+/* Base style for the tab buttons */
+.sitewide-page-tab {
+	background-color: rgb(255 255 0 / 2.5%);
+	border: 1px solid rgb(0 125 184 / 100%);
+	border-radius: 5px;
+	color: rgb(0 0 0 / 50%);
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 1.5px;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.sitewide-page-tab:hover {
+	background-color: rgb(255 255 0 / 2.5%);
+	border: 1px solid rgb(0 0 0 / 100%);
+	color: rgb(0 125 184 / 100%);
+}
+
+/* Highlight the active tab */
+.sitewide-page-tab--active {
+	background-color: rgb(0 125 184 / 38.4%);
+	border-color: #007db8;
+	color: rgb(0 0 0 / 100%);
+}
+
+.sitewide-page-tab--active:hover {
+	background-color: rgb(0 125 184 / 38.4%);
+	border: 1px solid rgb(0 0 0 / 100%);
+	color: rgb(0 125 184 / 100%);
+}
+
+/* stylelint-disable-next-line selector-class-pattern -- WordPress outputs an `.active` helper class; keep it until templates switch to BEM modifier. */
+.sitewide-page-tab.active {
+	background-color: rgb(0 125 184 / 38.4%);
+	border-color: #007db8;
+	color: rgb(0 0 0 / 100%);
+}
+
+/* stylelint-disable-next-line selector-class-pattern -- Temporary fallback for legacy `.active` helper class. */
+.sitewide-page-tab.active:hover {
+	background-color: rgb(0 125 184 / 38.4%);
+	border: 1px solid rgb(0 0 0 / 100%);
+	color: rgb(0 125 184 / 100%);
+}
+
+.sitewide-page-content {
+	margin: 0 auto;
+	max-width: 1080px;
+}
+
+/* Override theme floats/width to make content full-width centered like front page */
+/* stylelint-disable selector-class-pattern -- WordPress template classes use underscores; keep legacy selectors. */
+body.page-template-sitewide-page .content,
+body.page-template-home-styles-for-sale .content,
+body.page-template-default .content,
+body[class*='page-template-templates-cities-communities'] .content,
+body.error404 .content,
+body.idxc_fullwidth_search .content,
+body.page-template-sitewide-page #genesis-content,
+body.page-template-home-styles-for-sale #genesis-content,
+body.page-template-default #genesis-content,
+body[class*='page-template-templates-cities-communities'] #genesis-content,
+body.error404 #genesis-content,
+body.idxc_fullwidth_search #genesis-content {
+	display: block;
+	float: none !important;
+	margin: 0 auto;
+	max-width: 1080px;
+	width: auto !important;
+}
+
+/* Remove sidebar column and make wrapper single-column */
+body.page-template-sitewide-page .content-sidebar-wrap,
+body.page-template-home-styles-for-sale .content-sidebar-wrap,
+body.page-template-default .content-sidebar-wrap,
+body[class*='page-template-templates-cities-communities'] .content-sidebar-wrap,
+body.error404 .content-sidebar-wrap,
+body.idxc_fullwidth_search .content-sidebar-wrap {
+	display: block !important;
+	float: none !important;
+	margin: 0 auto;
+	max-width: 1080px;
+	width: auto !important;
+}
+
+body.page-template-sitewide-page .sidebar-primary,
+body.page-template-home-styles-for-sale .sidebar-primary,
+body.page-template-default .sidebar-primary,
+body[class*='page-template-templates-cities-communities'] .sidebar-primary,
+body.error404 .sidebar-primary,
+body.idxc_fullwidth_search .sidebar-primary {
+	display: none !important;
+}
+/* stylelint-enable selector-class-pattern */
+
+/* stylelint-disable no-descending-specificity -- WordPress float helpers (alignleft/alignright) mix with embed wrappers and require overlapping selectors. */
+iframe.fluidvids-item {
+	display: block;
+	height: auto; /* auto keeps ratio */
+	margin: 1em auto;
+	max-width: 560px;
+	width: 100%; /* shrink on small screens */
+}
+
+/* VIDEOS IN PAGE CONTENT — force 16:9 at max 560px (TJS 2025-08-30) */
+.sitewide-page-content .fluidvids {
+	margin: 1em auto;
+	max-width: 560px;
+	padding-top: 0 !important; /* override fluidvids padding hack */
+	position: static !important; /* neutralize relative wrapper */
+}
+
+.sitewide-page-content .fluidvids iframe,
+.sitewide-page-content iframe[src*='youtube.com'],
+.sitewide-page-content iframe[src*='youtu.be'],
+.sitewide-page-content iframe[src*='vimeo.com'] {
+	aspect-ratio: 16 / 9;
+	display: block;
+	height: auto !important;
+	margin: 0 auto;
+	max-width: 100%;
+	position: static !important; /* override absolute from fluidvids */
+	width: 100% !important;
+}
+
+/* VIDEO WRAP LIKE IMAGES — page.php only area (TJS 2025-08-30) */
+.sitewide-page-content .fluidvids.alignleft,
+.sitewide-page-content iframe.alignleft {
+	float: left;
+	margin: 0 1rem 1rem 0;
+	max-width: 560px;
+}
+
+.sitewide-page-content .fluidvids.alignright,
+.sitewide-page-content iframe.alignright {
+	float: right;
+	margin: 0 0 1rem 1rem;
+	max-width: 560px;
+}
+
+/* Mobile: drop floats */
+@media (width <= 700px) {
+	/* Narrow the content column to 400px centered under 700px */
+	/* stylelint-disable selector-class-pattern -- WordPress template classes use underscores; keep legacy selectors. */
+	body.page-template-sitewide-page .content,
+	body.page-template-home-styles-for-sale .content,
+	body.page-template-default .content,
+	body[class*='page-template-templates-cities-communities'] .content,
+	body.error404 .content,
+	body.idxc_fullwidth_search .content,
+	body.page-template-sitewide-page #genesis-content,
+	body.page-template-home-styles-for-sale #genesis-content,
+	body.page-template-default #genesis-content,
+	body[class*='page-template-templates-cities-communities'] #genesis-content,
+	body.error404 #genesis-content,
+	body.idxc_fullwidth_search #genesis-content,
+	.sitewide-page-content {
+		max-width: 700px;
+	}
+
+	body.page-template-sitewide-page .content-sidebar-wrap,
+	body.page-template-home-styles-for-sale .content-sidebar-wrap,
+	body.page-template-default .content-sidebar-wrap,
+	body[class*='page-template-templates-cities-communities'] .content-sidebar-wrap,
+	body.error404 .content-sidebar-wrap,
+	body.idxc_fullwidth_search .content-sidebar-wrap {
+		max-width: 700px;
+	}
+	/* stylelint-enable selector-class-pattern */
+
+	/* Drop image floats and center on small screens */
+	.sitewide-page-content .signature-image-container.alignleft,
+	.sitewide-page-content .signature-image-container.alignright,
+	.sitewide-page-content img.alignleft,
+	.sitewide-page-content img.alignright {
+		display: block;
+		float: none;
+		margin: 0 auto 1rem;
+	}
+
+	/* Center the lead H2 above media blocks (e.g., 404 page) */
+	.sitewide-page-content .entry-content h2 {
+		text-align: center;
+	}
+
+	/* Tighten spacing between centered H2 and following image/text block */
+	.sitewide-page-content .entry-content h2 + .front-page-block {
+		margin-top: 0.5rem;
+	}
+
+	.sitewide-page-content .fluidvids.alignleft,
+	.sitewide-page-content .fluidvids.alignright,
+	.sitewide-page-content iframe.alignleft,
+	.sitewide-page-content iframe.alignright {
+		float: none;
+		margin: 1em auto;
+	}
+}
+
+/* VIDEO INSIDE <p> WRAPPER — hit left margin & wrap right (TJS 2025-08-30) */
+.sitewide-page-content p > .fluidvids,
+.sitewide-page-content p > iframe {
+	float: left;
+	margin: 0 2rem 1rem 0; /* right & bottom spacing */
+	max-width: 560px;
+}
+
+/* Remove default paragraph spacing when it only contains the embed */
+.sitewide-page-content p:has(> .fluidvids),
+.sitewide-page-content p:has(> iframe) {
+	margin: 0; /* hit left margin */
+	padding: 0;
+}
+
+/* Mobile: drop float for wrapped-in-<p> case */
+@media (width <= 950px) {
+	.sitewide-page-content p > .fluidvids,
+	.sitewide-page-content p > iframe {
+		float: none;
+		margin: 1em auto;
+	}
+}
+
+/* stylelint-enable no-descending-specificity */
+
+/* CLASSIC EDITOR IMAGES/CAPTIONS — make them look like signature-image */
+.sitewide-page-content img.alignleft,
+.sitewide-page-content img.alignright,
+.sitewide-page-content figure.wp-caption img {
+	border: 1px solid #007db8;
+	border-radius: 5px;
+	box-sizing: border-box;
+	display: block;
+}
+
+.sitewide-page-content figure.wp-caption .wp-caption-text {
+	color: rgb(0 0 0 / 87.5%);
+	font-size: 0.875em;
+	padding: 0.1em 0;
+	text-align: center;
+}
+
+/* Desktop floats for classic editor media to mimic front-page image/text wrap */
+.sitewide-page-content figure.wp-caption.alignleft,
+.sitewide-page-content img.alignleft {
+	float: left;
+	margin: 0 1rem 1rem 0;
+}
+
+.sitewide-page-content figure.wp-caption.alignright,
+.sitewide-page-content img.alignright {
+	float: right;
+	margin: 0 0 1rem 1rem;
+}
+
+/* Keep classic editor media at 400px max on desktop */
+.sitewide-page-content figure.wp-caption,
+.sitewide-page-content img.size-medium {
+	max-width: 700px;
+}
+
+/* Breakpoint behavior: center and constrain starting at 700px and below */
+@media (width <= 700px) {
+	.sitewide-page-content figure.wp-caption.alignleft,
+	.sitewide-page-content figure.wp-caption.alignright,
+	.sitewide-page-content img.alignleft,
+	.sitewide-page-content img.alignright {
+		display: block;
+		float: none;
+		margin: 0 auto 1rem;
+	}
+
+	/* Avoid theme rule that forces 100% width at 767px; keep to 400px max
+	.sitewide-page-content figure.wp-caption,
+	.sitewide-page-content figure.wp-caption img,
+	.sitewide-page-content img.size-medium,
+	.sitewide-page-content img.alignleft,
+	.sitewide-page-content img.alignright {
+		max-width: 400px !important; / * but never exceed 400 * /
+		width: 100% !important; / * shrink to viewport * /
+	}
+*/
+}
+
+/* Also neutralize theme’s 767px full-width rule specifically for our scope */
+@media (width <= 767px) {
+	.sitewide-page-content figure.wp-caption.alignleft,
+	.sitewide-page-content figure.wp-caption.alignright {
+		max-width: 700px !important;
+		width: auto !important;
+	}
+}

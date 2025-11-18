@@ -1,0 +1,15 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"name": "Twin Rivers Golf Community"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [ [-81.1755215,28.6448431] ]
+        ]
+      }
+    }
+  ]
+}

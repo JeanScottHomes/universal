@@ -1,0 +1,19 @@
+/* 404-only styles, scoped by WordPress body class */
+
+/* Left-aligned media block (image) with text wrapping)
+   Use sitewide signature-image.css for sizing/margins; this class only floats. */
+.error404 .error-404__media {
+	float: left;
+}
+
+.error404 .error-404__after-media {
+	clear: both;
+}
+
+@media (width <= 700px) {
+	.error404 .error-404__media {
+		float: none;
+
+		/* sizing/margins handled by signature-image.css */
+	}
+}

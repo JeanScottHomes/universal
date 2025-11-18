@@ -1,0 +1,118 @@
+.sitewide-grid {
+	box-sizing: border-box;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	justify-content: start;
+	margin: 0 auto;
+	max-width: 1080px;
+	padding: 0 0 1rem;
+	text-align: center;
+	width: 100%;
+}
+
+.sitewide-grid .sitewide-grid__item a {
+	text-decoration: none;
+}
+
+.sitewide-grid__item .signature-image:hover {
+	border: 1px solid rgb(0 0 0 / 100%);
+}
+
+.sitewide-grid__item .signature-image-container {
+	margin: 0 auto;
+}
+
+.sitewide-grid__excerpt {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	padding: 0.5rem 1rem;
+}
+
+.sitewide-grid__excerpt p {
+	-webkit-box-orient: vertical;
+	color: rgb(0 0 0 / 87.5%);
+	display: -webkit-box;
+	font-size: 0.8em;
+	-webkit-line-clamp: 4;
+	margin-bottom: 0.5rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.sitewide-grid__pagination {
+	font-size: 95%;
+	text-align: center;
+}
+
+.sitewide-grid__pagination a.page-numbers {
+	text-decoration: none;
+}
+
+.sitewide-grid__pagination a.page-numbers,
+.sitewide-grid__pagination span.page-numbers {
+	margin: 0 0.25rem;
+}
+
+.sitewide-grid__pagination span.page-numbers.current {
+	color: rgb(0 125 184 / 100%);
+}
+
+.sitewide-grid__pagination a.page-numbers:hover {
+	color: rgb(0 125 184 / 100%);
+}
+
+.sitewide-grid__text {
+	background-color: rgb(255 255 0 / 2.5%);
+	border: 1px solid rgb(0 125 184 / 100%);
+	border-radius: 5px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	margin: 0.384rem auto 0;
+	max-width: 400px;
+	padding: 0.384rem;
+	position: relative;
+	text-align: left;
+	width: 100%;
+}
+
+.sitewide-grid__title {
+	box-sizing: border-box;
+	color: rgb(0 0 0 / 87.5%);
+	font-size: 1.25em;
+	font-weight: normal;
+	margin: 0;
+
+	/* TJS 08/25/25 - Truncate grid titles to one line with ellipsis */
+	overflow: hidden;
+
+	/* display: block;
+	padding: 0.384rem;
+	margin: 0.384rem auto 0;
+	box-sizing: border-box;
+*/
+	padding: 0.5rem 1rem 0;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.sitewide-grid__views {
+	color: rgb(0 0 0 / 50%) !important;
+	font-size: 0.75em !important;
+	margin: 0;
+	text-align: right;
+}
+
+.sitewide-grid__item:hover .sitewide-grid__text {
+	background-color: rgb(255 255 0 / 5%);
+	border: 1px solid rgb(0 0 0 / 100%);
+}
+
+.sitewide-grid__item:hover h3.sitewide-grid__title {
+	color: rgb(0 125 184 / 100%);
+	font-weight: bolder;
+}

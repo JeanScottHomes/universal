@@ -1,0 +1,45 @@
+/*
+BUTTON LINK WRAP
+*/
+
+.button-link-sitewide-wrap {
+	margin: 0 auto;
+	max-width: 1080px;
+	padding: 1rem 0;
+	text-align: left;
+}
+
+/*
+BUTTON LINK FORMATTING
+ */
+
+.button-link-sitewide {
+	background-color: rgb(255 255 0 / 2.5%);
+	border: 1px solid rgb(0 125 184 / 100%);
+	border-radius: 5px;
+	display: inline-block;
+	letter-spacing: 1.5px;
+	line-height: 1;
+	margin: 0 auto;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.button-link-sitewide:hover {
+	background-color: rgb(255 255 0 / 5%);
+	border: 1px solid rgb(0 0 0 / 100%);
+	color: rgb(0 125 184 / 100%);
+	font-weight: 400;
+}
+
+/* ========== PAGE 800px and Less ========== */
+@media screen and (width <= 700px) {
+	.button-link-sitewide-wrap {
+		margin: 0 auto;
+		max-width: 1080px;
+		padding: 1rem;
+		text-align: center;
+	}
+}

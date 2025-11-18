@@ -1,0 +1,136 @@
+/*
+iHomefinder Styles
+Solution: Optima Express (responsive)
+IDXCentral Template: iHomefinder Base
+Version: 2.0.2
+Updated: 2020-02-19
+*/
+
+/* iHomefinder General Styles */
+
+#ihf-main-container .ihf-results-extra-info img {
+	width: auto;
+}
+
+.radio-inline input {
+	width: auto;
+}
+
+#ihf-main-container .mt-60 {
+	margin-top: 5px !important;
+}
+
+#ws-form > input {
+	width: auto;
+}
+
+.widget.widget_ihomefinderquicksearchwidget span {
+	line-height: unset;
+}
+
+#ihf-login-form input {
+	width: auto;
+}
+
+#ihf-login-form label {
+	padding: 5px 0 0 10px;
+}
+
+#ihfSearchProfile_schedule > input {
+	padding-right: 3px;
+	width: auto;
+} /* email alerts page > advanced > weekdays */
+.widget_ihomefindermoreinfowidget .ihf-container {
+	border-radius: 3px;
+	display: inline-block !important;
+	padding: 15px;
+}
+
+form#address fieldset > .col-xs-3:first-child {
+	padding-left: 0;
+}
+
+span.carousel-control {
+	opacity: 0.75 !important;
+}
+
+#ihf-main-container .carousel-control .glyphicon-chevron-right {
+	right: 5%;
+}
+
+#ihf-main-container .carousel-control .glyphicon-chevron-left {
+	left: 5%;
+}
+
+#ihf-main-container .dropdown-menu li {
+	list-style-type: none !important;
+}
+
+input#ws-go {
+	width: auto;
+}
+
+#ihf-detail-navrow .ihf-detail-navigation {
+	float: right;
+}
+
+/* Grid Layout */
+.ihf-grid-result-address {
+	line-height: 15px;
+	padding-bottom: 10px;
+	text-transform: none;
+}
+
+#ihf-main-container .ihf-grid-result-price a {
+	font-size: 16px;
+}
+
+#ihf-main-container .title-bar-1 {
+	border-radius: 3px;
+	padding: 3px 8px;
+}
+
+.ihf-grid-result-attribution {
+	display: none !important;
+}
+
+.ihf-grid-result-mlsnum-proptype {
+	text-align: right;
+}
+
+#ihf-main-container .form-inline .radio input[type='radio'],
+#ihf-main-container .form-inline .checkbox input[type='checkbox'] {
+	width: initial !important;
+}
+
+#ihf-main-container .leaflet-control-zoom {
+	visibility: visible;
+}
+
+#ihf-main-container {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.ihf-tab-pane {
+	font-size: 14px;
+}
+
+/*
+Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (width <= 1139px) {
+}
+
+@media only screen and (width <= 1023px) {
+}
+
+@media only screen and (width <= 767px) {
+}
+
+@media only screen and (width <= 600px) {
+}
+
+@media only screen and (width <= 359px) {
+}

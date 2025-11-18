@@ -1,0 +1,152 @@
+/*
+* 083125 0601
+* iHomeFinder / Optima Express Shadow DOM override
+* <?php echo home_url('/wp-admin/admin.php?page=ihf-config-page'); ?>
+*/
+
+/* iHomeFinder "Add CSS to IDX Stylesheet" Out-of-the-Box */
+div.page-container
+	> div.ui-grid.ui-grid-item
+	> p.ui-typography.account-message.ui-typography-body1.ui-typography-align-center {
+	display: none;
+}
+
+/* iHomeFinder "Add Code to IDX Content" Out-of-the-box:
+<link rel="stylesheet" href="https://cdn.idxcentral.net/assets/ihomefinder/style-ihf-v10.css">
+*/
+
+div.ui-grid.ui-grid-item {
+	padding: 1rem 4px !important;
+}
+
+.ihf-container {
+	margin: 0 auto;
+	max-width: 1100px;
+}
+
+/* Remove default grey underline under IDX nav tabs */
+.ihf-report-links {
+	border-bottom: none !important;
+}
+
+/* Remove grey underline span under IDX nav buttons */
+.ihf-report-links span {
+	background: none !important;
+	border: none !important;
+}
+
+/* Add spacing between IDX report nav buttons without affecting inner layout */
+.ihf-report-links a.ui-button-base {
+	margin: 10px 5px 0 0 !important;
+}
+
+.ihf-report-links a.ui-button-base:last-child {
+	margin-right: 0 !important;
+}
+
+/* Style active IDX report nav tab to match hover */
+a.ui-button-base[aria-selected='true'] {
+	background-color: rgb(255 255 0 / 5%) !important;
+	border: 1px solid rgb(0 0 0 / 100%) !important;
+	border-radius: 5px !important;
+	color: rgb(0 125 184 / 100%) !important;
+}
+
+/* Style IDX report nav buttons (Listings / Open Houses / Market Report) to match sitewide buttons */
+a.ui-button-base {
+	align-items: center;
+	background-color: rgb(255 255 0 / 2.5%) !important;
+	border: 1px solid rgb(0 125 184 / 100%) !important;
+	border-radius: 5px !important;
+	color: rgb(0 0 0 / 100%) !important;
+	display: flex;
+	font-size: 14px !important;
+	font-weight: 400;
+	justify-content: center;
+	letter-spacing: 1.5px;
+	margin: 10px auto 0;
+	padding: 6px 12px !important;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+a.ui-button-base:hover {
+	background-color: rgb(255 255 0 / 5%) !important;
+	border: 1px solid rgb(0 0 0 / 100%) !important;
+	color: rgb(0 125 184 / 100%) !important;
+}
+
+/* Restyle IDX dropdown menu links */
+a.ui-typography.ui-link.ui-link-underline-hover.ui-button-base {
+	background-color: rgb(255 255 0 / 2.5%) !important;
+	color: rgb(0 0 0 / 100%) !important;
+	text-decoration: none !important;
+}
+
+a.ui-typography.ui-link.ui-link-underline-hover.ui-button-base:hover {
+	background-color: rgb(255 255 0 / 5%) !important;
+	border: 1px solid rgb(0 125 184 / 100%) !important;
+	border-radius: 5px !important;
+	color: rgb(0 125 184 / 100%) !important;
+}
+
+/* Add bottom padding under IDX signup message */
+p.ui-typography.ui-typography-body1 {
+	margin-bottom: 10px !important;
+}
+
+/* Match IDX button with sitewide button styles */
+button.ui-button-base.ui-button.ui-button-contained.ui-button-contained-primary {
+	background-color: rgb(255 255 0 / 2.5%) !important;
+	border: 1px solid rgb(0 125 184 / 100%) !important;
+	border-radius: 5px !important;
+	color: rgb(0 0 0 / 100%) !important;
+	display: inline-block;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+	line-height: 1;
+	margin: 0 auto;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+button.ui-button-base.ui-button.ui-button-contained.ui-button-contained-primary:hover {
+	background-color: rgb(255 255 0 / 5%) !important;
+	border: 1px solid rgb(0 0 0 / 100%) !important;
+	color: rgb(0 125 184 / 100%) !important;
+}
+
+/* Match IDX outlined button with sitewide button styles */
+button.ui-button-base.ui-button.ui-button-outlined.ui-button-outlined-primary {
+	background-color: rgb(255 255 0 / 2.5%) !important;
+	border: 1px solid rgb(0 125 184 / 100%) !important;
+	border-radius: 5px !important;
+	color: rgb(0 0 0 / 100%) !important;
+	display: inline-block;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+	line-height: 1;
+	margin: 0 auto;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+button.ui-button-base.ui-button.ui-button-outlined.ui-button-outlined-primary:hover {
+	background-color: rgb(255 255 0 / 5%) !important;
+	border: 1px solid rgb(0 0 0 / 100%) !important;
+	color: rgb(0 125 184 / 100%) !important;
+}
+
+/* Card hover override inside Shadow DOM */
+.ihf-listing-result-cell:hover,
+[class*='ihf-listing-result-cell']:hover {
+	background-color: rgb(255 255 0 / 5%) !important;
+	border: 1px solid rgb(0 0 0 / 100%) !important;
+	box-shadow: none !important;
+	color: rgb(0 125 184 / 100%) !important;
+}

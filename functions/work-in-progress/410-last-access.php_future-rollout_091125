@@ -1,0 +1,120 @@
+<?php
+/*
+Staged for future rollout — not active unless included.
+
+Plugin Name: 410 Last-Access Tracker
+Description: Records last-access date and hit counts for HTTP 410 responses. Use as MU plugin or include from your theme.
+Version: 0.1
+
+WHY THIS EXISTS
+- Redirection shows last access for 301s but not for 410s. We keep 410s for ~90 days then purge.
+- This lightweight tracker records when a 410 URL was first/last seen and how many hits, so we can purge confidently.
+
+HOW IT WORKS
+- Hooks `status_header` and, when the HTTP code is 410, stores the request URI + timestamps in a JSON file.
+- Storage lives in uploads: `wp-content/uploads/tjs-410-last-access.json` (survives deploys, easy to back up).
+- A viewer under Tools → “410 Last Access” shows a sortable table and a CSV export.
+
+HOW TO DEPLOY
+- Move this file to `wp-content/mu-plugins/410-last-access.php` (recommended) or include from theme.
+
+HOW TO USE
+- Let it run for your 90-day window. Before purging Redirection rules, open the report and sort by “Last Seen”.
+- Export CSV if you want a record, then delete rules that haven’t been hit in >90 days.
+
+REMOVAL
+- Delete the MU plugin file to stop logging. The JSON file remains until you remove it.
+*/
+
+// Persist JSON in uploads to survive deploys.
+function tjs_410_store_path() {
+    $uploads = wp_upload_dir();
+    return trailingslashit( $uploads['basedir'] ) . 'tjs-410-last-access.json';
+}
+
+// When any 410 status header is sent, log the request URI.
+add_filter( 'status_header', function ( $status_header, $code ) {
+    if ( (int) $code !== 410 ) {
+        return $status_header;
+    }
+
+    $uri = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
+    if ( ! $uri ) {
+        return $status_header;
+    }
+
+    $file = tjs_410_store_path();
+    $data = [];
+    if ( file_exists( $file ) ) {
+        $raw = file_get_contents( $file );
+        if ( $raw ) {
+            $json = json_decode( $raw, true );
+            if ( is_array( $json ) ) {
+                $data = $json;
+            }
+        }
+    }
+
+    $now = gmdate( 'c' );
+    if ( ! isset( $data[ $uri ] ) ) {
+        $data[ $uri ] = [ 'first' => $now, 'last' => $now, 'hits' => 1 ];
+    } else {
+        $data[ $uri ]['last'] = $now;
+        $data[ $uri ]['hits'] = (int) $data[ $uri ]['hits'] + 1;
+    }
+
+    // Write atomically when possible.
+    $tmp = $file . '.tmp';
+    file_put_contents( $tmp, wp_json_encode( $data ) );
+    @rename( $tmp, $file );
+
+    return $status_header;
+}, 10, 2 );
+
+// Simple viewer and CSV export under Tools.
+add_action( 'admin_menu', function () {
+    add_management_page( '410 Last Access', '410 Last Access', 'manage_options', 'tjs-410-last-access', function () {
+        $file = tjs_410_store_path();
+        $data = [];
+        if ( file_exists( $file ) ) {
+            $json = json_decode( file_get_contents( $file ), true );
+            if ( is_array( $json ) ) {
+                $data = $json;
+            }
+        }
+
+        echo '<div class="wrap"><h1>410 Last Access</h1>';
+        echo '<p>Tracks last time bots/visitors hit URLs that return HTTP 410 (Gone). Use this to decide when rules are safe to delete.</p>';
+
+        if ( isset( $_GET['download'] ) && $_GET['download'] === 'csv' && ! headers_sent() ) {
+            header( 'Content-Type: text/csv' );
+            header( 'Content-Disposition: attachment; filename="tjs-410-last-access.csv"' );
+            $out = fopen( 'php://output', 'w' );
+            fputcsv( $out, [ 'URL', 'First Seen (UTC)', 'Last Seen (UTC)', 'Hits' ] );
+            foreach ( $data as $url => $row ) {
+                fputcsv( $out, [ $url, $row['first'] ?? '', $row['last'] ?? '', $row['hits'] ?? 0 ] );
+            }
+            fclose( $out );
+            exit;
+        }
+
+        echo '<p><a class="button" href="?page=tjs-410-last-access&download=csv">Download CSV</a></p>';
+
+        if ( empty( $data ) ) {
+            echo '<p>No 410 hits recorded yet.</p></div>';
+            return;
+        }
+
+        // Sort by last seen desc
+        uasort( $data, function ( $a, $b ) {
+            return strcmp( $b['last'] ?? '', $a['last'] ?? '' );
+        } );
+
+        echo '<table class="widefat"><thead><tr><th>URL</th><th>First Seen (UTC)</th><th>Last Seen (UTC)</th><th>Hits</th></tr></thead><tbody>';
+        foreach ( $data as $url => $row ) {
+            printf( '<tr><td>%s</td><td>%s</td><td>%s</td><td>%d</td></tr>', esc_html( $url ), esc_html( $row['first'] ?? '' ), esc_html( $row['last'] ?? '' ), (int) ( $row['hits'] ?? 0 ) );
+        }
+        echo '</tbody></table></div>';
+    } );
+} );
+

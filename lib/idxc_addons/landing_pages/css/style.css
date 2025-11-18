@@ -1,0 +1,403 @@
+/*
+	Landing Page Styles         
+	Author: IDXCentral
+	Author URI: http://www.idxcentral.com/
+	Version: 1.0.2
+*/
+a:focus {
+	outline-color: #fff;
+}
+
+#landing_main a,
+#landing_main a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.content-sidebar-wrap .content {
+	padding: 0;
+}
+
+.site-inner,
+.wrap,
+.iu_max_wrap {
+	margin: 0;
+	max-width: unset;
+}
+
+.site-container {
+}
+
+.site-inner {
+	background: rgb(0 0 0 / 38%);
+	padding: 0;
+}
+
+.entry {
+	background-color: transparent;
+	margin-bottom: 0;
+	padding: 0;
+	text-align: center;
+}
+
+h1,
+h2,
+h3,
+body,
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.landing_headlines h1 {
+	color: #fff;
+	font-size: 50px;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #000;
+}
+
+.landing_headlines h3,
+.landing_headlines p {
+	color: #fff;
+	font-size: 24px;
+	line-height: 1.25;
+}
+
+.landing_headlines {
+	color: #fff;
+	padding: 20px 20px 0;
+}
+
+.landing_form {
+	margin: 0 auto;
+	max-width: 700px;
+	padding: 0 20px;
+}
+
+.landing_contact {
+	color: #fff;
+	font-size: 16px;
+	padding: 0;
+	text-shadow: 2px 2px 2px #000;
+}
+
+.landing_content {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.landing_content::after {
+	clear: both;
+	content: ' ';
+	display: table;
+}
+
+.landing_content_wrap {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.landing_contact_wrap {
+	padding: 2% 4%;
+}
+
+.landing_contact_wrap::after {
+	clear: both;
+	content: ' ';
+	display: table;
+}
+
+.landing_agent_image {
+	border-radius: 5px;
+	max-width: 100px;
+}
+
+.agent_card {
+	display: inline-block;
+	float: left;
+	margin: 0;
+}
+
+.agent_card_photo {
+	float: left;
+	margin: 0 22px 0 0;
+}
+
+.agent_card_info {
+	float: left;
+	margin: 0;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.agent_logo {
+	float: right;
+	margin: 0;
+}
+
+.agent_card.no_logo {
+	float: none;
+}
+
+.agent_card.no_logo.no_photo .agent_card_info {
+	text-align: center;
+}
+
+.landing_confirmation_container {
+	margin: 0 auto;
+	max-width: 1350px;
+	padding: 1% 5%;
+}
+
+.landing_confirmation {
+	background: rgb(255 255 255 / 80%);
+	border-radius: 3px;
+	color: #222;
+	display: inline-block;
+	margin: 20px auto;
+	max-width: 1350px;
+	padding: 2% 3%;
+	text-align: left;
+}
+
+.landing_content_inner {
+	margin: 0 auto;
+	max-width: 1350px;
+}
+
+/* Bulleted - Alternate Layout */
+.landing_content.yes_bullet .landing_headlines {
+	float: left;
+	padding: 0 20px;
+	text-align: left;
+	width: 50%;
+}
+
+.landing_content.yes_bullet .landing_form {
+	background: rgb(0 0 0 / 65%);
+	border-radius: 3px;
+	float: left;
+	padding: 30px 25px 0;
+	width: 50%;
+}
+
+.landing_content.yes_bullet .landing_form h3,
+.landing_content.yes_bullet .landing_form .landing_form_heading {
+	color: #fff;
+	font-size: 30px;
+}
+
+ul.landing_bullets {
+	margin: 0 25px;
+}
+
+li.landing_bullet {
+	margin: 0 0 10px;
+}
+
+.landing_content.yes_bullet .landing_headlines h1 {
+	font-size: 45px;
+}
+
+.landing_content.yes_bullet .landing_content_inner {
+	padding: 0 20px 0 0;
+}
+
+.yes_bullet.yes_confirm .landing_headlines {
+	float: none;
+	text-align: center;
+
+	/* display:none; */
+	width: 100%;
+}
+
+.yes_bullet.yes_confirm .landing_bullets {
+	display: none;
+}
+
+/* Call to Action Buttons------------------------------------------------------------ */
+.landing_button_wrap {
+	display: inline-block;
+	margin: 0;
+	vertical-align: top;
+	width: 33%;
+}
+
+.landing_button_wrap a.landing_button {
+	display: block;
+	margin: 0 2% 10px;
+	padding: 9px 15px 10px;
+	text-align: center;
+}
+
+a.landing_button {
+	background: none repeat scroll 0 0 #0093c0;
+	border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	margin: 3px 20px 10px 0;
+	padding: 9px 15px 10px;
+	text-decoration: none;
+}
+
+a.landing_button:hover {
+	background: none repeat scroll 0 0 #2ea6cb;
+	color: #fff;
+}
+
+/* Gravity Forms */
+.gfield_error {
+	background-color: transparent;
+	color: #b94a48;
+}
+
+/* Append an error message */
+xbody.page-template-page_idxc_landing .gfield_error::after {
+	content: 'Sorry, this field is required' !important;
+}
+
+/* Hide the error message since we're displaying it above */
+.validation_error {
+	display: none;
+}
+
+body.page-template-page_idxc_landing .gform_wrapper li.gfield.gfield_error,
+body.page-template-page_idxc_landing
+	.gform_wrapper
+	li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+	background-color: transparent;
+	border-bottom: none;
+	border-top: none;
+	box-sizing: unset;
+	margin-bottom: 0 !important;
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+#landing_main
+	.gform_wrapper
+	input:not([type='radio'], [type='checkbox'], [type='submit'], [type='button'], [type='image'], [type='file']),
+#landing_main .gform_wrapper textarea,
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select {
+	appearance: none;
+	background-color: #eee;
+	border: none;
+	border-radius: 0;
+	border-radius: 0;
+	border-radius: 0;
+	color: #555;
+	font-size: 14px;
+	padding: 16px;
+	width: 100%;
+}
+
+/* #landing_main .gform_button button, .et_pb_section .gform_wrapper .gform_footer input.button, #landing_main .gform_wrapper .gform_footer input[type=submit], #landing_main .gform_wrapper .gform_page_footer input.button, #landing_main .gform_wrapper .gform_page_footer input[type=submit]{background:#66c941;border-width:6px!important;border-color:#66c941;border-radius:3px;letter-spacing:2px;font-size:16px;font-family:'Poppins',Helvetica,Arial,Lucida,sans-serif!important;font-weight:600!important;text-transform:uppercase!important;xbackground-color:#66c941;color:#fff;border-style:unset;padding:.3em 1em;border:2px solid transparent;}
+*/
+#landing_main .gform_wrapper .gform_footer input.button:hover,
+#landing_main .gform_wrapper .gform_footer input[type='submit']:hover {
+	cursor: pointer;
+}
+
+#landing_main .gform_wrapper .gform_footer input.button,
+#newsletter_subscribe .gform_wrapper .gform_footer input[type='submit'],
+x.gform_wrapper .gform_page_footer input.button,
+x.gform_wrapper .gform_page_footer input[type='submit'] {
+	font-size: 1em;
+	margin: 0 0 16px;
+	width: 100%;
+}
+
+#landing_main .gform_wrapper ul.gform_fields li.gfield {
+	padding-right: 0;
+}
+
+div#gform_confirmation_wrapper {
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #fff;
+	color: #fff;
+	margin: 20px 0 0;
+	padding: 10px;
+	text-align: center;
+}
+
+#landing_main .gform_wrapper .field_description_below .gfield_description {
+	padding-top: 6px;
+}
+
+#landing_main .gform_confirmation_wrapper {
+	background: rgb(255 255 255 / 80%);
+	border-radius: 3px;
+	color: #333;
+	padding: 20px;
+}
+
+#landing_main .gform_validation_errors,
+#landing_main .gform_body .validation_message {
+	text-align: left;
+}
+
+#landing_main .gform_validation_errors a {
+	color: #c02b0a !important;
+}
+
+#landing_main .gform_validation_errors a:focus {
+	border-radius: 3px;
+	outline-color: #c02b0a !important;
+}
+
+#landing_main button:focus,
+#landing_main input:focus[type='button'],
+#landing_main input:focus[type='reset'],
+#landing_main input:focus[type='submit'] {
+	outline-color: #fff;
+}
+
+/* Misc */
+
+/* Media Queries */
+@media only screen and (width <= 767px) {
+	h1 {
+		font-size: 40px;
+	}
+
+	h3 {
+		font-size: 16px;
+	}
+
+	.no_photo .agent_card_info {
+		text-align: center;
+	}
+
+	.agent_card {
+		float: none;
+		padding: 0 0 30px;
+	}
+
+	.agent_logo {
+		float: none;
+	}
+
+	.landing_button_wrap {
+		display: block;
+		width: 100%;
+	}
+
+	.landing_content.yes_bullet .landing_headlines {
+		float: none;
+		width: 100%;
+	}
+
+	.landing_content.yes_bullet .landing_form {
+		float: none;
+		width: 100%;
+	}
+
+	.landing_content.yes_bullet .landing_content_inner {
+		padding: 30px 20px 40px;
+	}
+
+	.landing_content.yes_bullet .landing_headlines {
+		padding: 0 0 30px 20px;
+	}
+}

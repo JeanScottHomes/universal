@@ -1,0 +1,136 @@
+/* 🔹 TJS 6/30/25 – Override heading and text sizes with full hierarchy scaling */
+
+/* ===============
+   FONT VARIABLES
+   =============== */
+
+:root {
+	/* Fonts */
+	--main-primary-font: 'Montserrat', sans-serif;
+	--main-secondary-font: 'Cormorant Garamond', serif;
+	--main-tertiary-font: 'Cormorant Garamond', serif;
+
+	/* Main Colors */
+	--main-primary-color: rgb(0 0 0 / 100%);
+	--main-secondary-color: rgb(0 0 0 / 100%);
+	--main-primary-color-text-dark: rgb(0 0 0 / 100%);
+	--main-primary-color-text-light: #fff;
+	--main-button-color-dark: #222;
+	--main-button-color-light: #fff;
+	--main-spot-color-1: #966c02;
+
+	/* iHomefinder Colors */
+	--idxc-primary-color: #111 !important;
+	--idxc-primary-color-border: #333 !important;
+	--idxc-primary-color-text: #fff !important;
+	--idxc-secondary-color: #333 !important;
+
+	/* IDX Broker Color & Style */
+	--idx-button-color: #222 !important;
+	--idx-font-family: 'Muli', sans-serif !important;
+}
+
+/* ===============
+   FONTS DEFINED
+   =============== */
+
+/* 🔸 Base font family for headings (serif, elegant) */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--main-primary-color-text-dark);
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 300;
+	line-height: 1.2;
+	margin: 2rem 0 1rem;
+}
+
+/* 🔸 Paragraphs use body font (sans-serif, modern) */
+
+body {
+	font-family: Montserrat, sans-serif;
+	font-family: var(--main-primary-font);
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+p {
+	color: var(--main-primary-color-text-dark);
+	font-family: Montserrat, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0 0 1rem;
+}
+
+ul {
+	margin-bottom: 1rem;
+	padding: 0 0 0 2rem;
+}
+
+/* 🔸 Heading sizes for desktop */
+h1 {
+	font-size: 34px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 17px;
+}
+
+h6 {
+	font-size: 15px;
+}
+
+/* 🔸 Responsive scaling for mobile */
+@media (width <= 767px) {
+	h1 {
+		font-size: 28px;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+	h4 {
+		font-size: 16px;
+	}
+
+	h5 {
+		font-size: 15px;
+	}
+
+	h6 {
+		font-size: 14px;
+	}
+
+	body {
+		font-size: 15px;
+	}
+
+	p {
+		font-size: 15px;
+	}
+
+	ul {
+		font-size: 15px;
+	}
+}

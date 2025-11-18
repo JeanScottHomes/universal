@@ -1,0 +1,549 @@
+<?php
+
+/* FILE MOVED TO /templates/featured-listings-layout.php
+ * NOTED IN universal/lib/idxc_addons/featured_listings/dsp_single.php LINE 13
+ */
+
+/* 
+Add-on: Featured Listings
+Layout: Single detals layout2
+Created: 2024-04-03
+Author: Mark Moineau
+Version: 1.0.0
+*/
+
+//add_action('genesis_before_content', 'genesis_do_breadcrumbs')
+?>
+
+<style>
+	/* Page specific styles */
+
+	.ao_listing_layout2 .isc_info_bar {
+		flex-wrap: wrap;
+		justify-content: left;
+		align-items: flex-start;
+	}
+
+	.ao_listing_layout2 .isc_detail_items div.isc_beds {
+		padding-left: 0;
+	}
+
+	.single-idxc_featlist h1 {
+		display: none;
+	}
+
+	/* Ensure H1 inside the global breadcrumbs bar is visible on this template */
+	.single-idxc_featlist .breadcrumbs-h1-bar__title {
+		display: block;
+	}
+
+	.single-idxc_featlist .isc_info_bar h1 {
+		display: block;
+		min-width: 100%;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.breadcrumb {
+		font-size: 16px;
+		font-family: var(--main-primary-font);
+		margin-top: 20px
+	}
+
+
+	.content-sidebar-wrap .content {
+		padding-top: 0 !important;
+	}
+
+	.entry {
+		margin-bottom: 0;
+		padding: 0;
+	}
+
+	.galleria-stage .galleria-image img {
+		width: 100% !important;
+		height: 100% !important;
+		object-fit: cover;
+	}
+</style>
+
+<style>
+	/* TJS 2025-09-02 — Lite YouTube embed minimal styles (renamed to youtube-lite-*) */
+	.youtube-lite-embed {
+		position: relative;
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		cursor: pointer;
+		aspect-ratio: 16 / 9;
+		/* keep 16:9 while iframe loads */
+	}
+
+	.youtube-lite-thumb {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border: 1px solid rgba(0, 125, 184, 1);
+		border-radius: 5px;
+	}
+
+	.youtube-lite-playbtn {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background: rgba(0, 0, 0, 0.55);
+		color: #fff;
+		border-radius: 50%;
+		width: 64px;
+		height: 64px;
+		line-height: 64px;
+		text-align: center;
+		font-size: 28px;
+	}
+</style>
+
+
+<?php // Check if Featured Image is set. If set, nothing, if not set, then add Page Tile section
+// Use the current post ID; $post_id may be undefined in this scope on production
+if (has_post_thumbnail(get_the_ID())) {
+	// Do nothing as the H1 Tag is included in the Page Banner - customization: entry title over photo hidden with css on this template only
+} else { ?>
+	<div class="iul_full_width ao_title_no_image">
+		<div class="wrap">
+			<?php /* <h1 class="entry-title"><?php echo get_the_title() ; ?><span class="visuallyhidden"><?php echo $location;?></span></h1> */ ?>
+		</div>
+	</div>
+<?php } ?>
+
+<div class="ao_listing_layout2">
+	<div id="details" class="isc_info_bar_container iul_full_width isc_color1">
+    <div class="wrap">
+
+            <!-- Standard site-wide breadcrumbs + H1 -->
+            <div class="breadcrumbs-h1-wrapper" style="margin-bottom:1rem">
+                <?php echo do_shortcode('[breadcrumbs_h1]'); ?>
+            </div>
+
+            <div class="isc_info_bar">
+
+                <!-- Featured Listings info bar: price + details only -->
+                <div class="isc_price" style="min-width:50%">
+					<?php if (!empty($price_sold) || $price_sold == "0") {
+						// Check directly if $price_sold is "0" and echo 'undisclosed', else format and echo the price.
+						echo $price_sold == "0"
+							? '<span class="isc_item_value">undisclosed</span>'
+							: '<span class="isc_item_value">$' . number_format(intval($price_sold), 0, '', ',') . '</span>';
+					} elseif (!empty($price) || $price == "0") {
+						echo $price == "0"
+							? '<span class="isc_item_value">undisclosed</span>'
+							: '<span class="isc_item_value">$' . number_format(intval($price), 0, '', ',') . '</span>';
+					} ?>
+				</div>
+
+                <div class="isc_details">
+					<div class="isc_detail_items">
+						<?php if (!empty($beds)) {
+							echo '<div class="isc_beds"><span class="isc_number">' . $beds . '</span><span class="isc_label">Bedrooms</span></div>';
+						} ?>
+						<?php if (!empty($baths)) {
+							echo '<div class="isc_baths"><span class="isc_number">' . $baths . '</span><span class="isc_label">Bathrooms</span></div>';
+						} ?>
+						<?php if (!empty($sqft)) {
+							echo '<div class="isc_sqft"><span class="isc_number">' . $sqft . '</span><span class="isc_label">SqFt</span></div>';
+						} ?>
+					</div>
+				</div>
+
+
+			</div><!-- end isc_info_bar  -->
+		</div><!-- end wrap  -->
+	</div><!-- end id=details  -->
+
+	<style>
+		.video_images_control_on {
+			border-bottom-width: 2px;
+			border-bottom-color: black;
+			border-bottom-style: solid;
+		}
+
+		.nextgen_pro_sidescroll.nextgen_pro_sidescroll_open {
+			padding-top: 0px;
+		}
+
+		#video_images_wrap {
+			flex-grow: 1;
+			max-width: 75%;
+		}
+
+		#video_images_content_01 #video {
+			/* TJS 2025-09-02: Make video container full width and centered */
+			min-width: 100%;
+			width: 100%;
+			max-width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@media only screen and (max-width:1024px) {
+
+			#video_images_wrap {
+				max-width: 100%;
+			}
+
+			#video_images_content_01 #video {
+				min-width: 100%;
+				width: 100%;
+				max-width: 100%
+			}
+		}
+	</style>
+
+	<?php
+
+	$display_tour_video = "display:none";
+	$tour_video_control_class = "";
+	$display_zillow = "display:none";
+	$zillow_control_class = "";
+	$display_nexgen = "display:none";
+	$nexgen_control_class = "";
+
+	if (!empty($tour_url)) {
+		$display_tour_video = "display:block";
+		$tour_video_control_class = "video_images_control_on";
+	} else if (!empty($thegallerynumber)) {
+		$display_nexgen = "display:block";
+		$nexgen_control_class = "video_images_control_on";
+	} else if (!empty($zillow_tour_url)) {
+		$display_zillow = "display:block";
+		$zillow_control_class = "video_images_control_on";
+	}
+	?>
+
+	<!--BEGIN HOME GALLERY-->
+	<?php
+	if (!empty($tour_url) || !empty($thegallerynumber) || !empty($zillow_tour_url)) // DON'T SHOW unless 1 of the tab elements is not empty
+	{ ?>
+
+		<div class="isc_section isc_property_information" style="border:0px; padding-top:0px;">
+			<div class="isc_content_wrap">
+
+				<div class="isc_label">
+					<div class="isc_label_heading">Home Gallery</div>
+				</div>
+
+				<div id="video_images_wrap" class="isc_content">
+
+					<div id="video_images_controls_wrap" style="display:flex; margin-bottom:20px; padding-left:4px">
+
+						<?php
+						if (!empty($tour_url)) { ?>
+							<div id="video_images_control_01" class="<?php echo $tour_video_control_class; ?>"
+								style="margin-right:42px; cursor:pointer">
+								<h3 style="line-height: 1; padding-bottom: 0px; margin-bottom: 0px; cursor:pointer">Real Video
+									Tour</h3>
+							</div>
+
+						<?php } ?>
+
+						<?php
+						if (!empty($thegallerynumber)) { ?>
+							<div id="video_images_control_02" class="<?php echo $nexgen_control_class; ?>"
+								style="margin-right:42px; cursor:pointer">
+								<h3 style="line-height: 1; padding-bottom: 0px; margin-bottom: 0px;">Photo Gallery</h3>
+							</div>
+						<?php } ?>
+
+
+						<?php
+						if (!empty($zillow_tour_url)) { ?>
+							<div id="video_images_control_03" class="<?php echo $zillow_control_class; ?>"
+								style="margin-right:42px; cursor:pointer">
+								<h3 style="line-height: 1; padding-bottom: 0px; margin-bottom: 0px;">Zillow Tour</h3>
+							</div>
+						<?php } ?>
+
+					</div><!--end video_images_controls_wrap-->
+
+					<!--HOME GALLERY TAB 1 - video tour-->
+					<?php
+					if (!empty($tour_url)) { ?>
+						<div id="video_images_content_01" style="<?php echo $display_tour_video; ?>">
+
+							<div id="video" class="xisc_tour_info xiul_full_width">
+								<div class="wrap">
+
+									<?php
+									/* TJS 2025-09-02 — Replaced FooBox video link with Lite YouTube embed for performance and to avoid WP Rocket conflicts. Old code kept for reference. 
+							<a href="<?php echo $tour_url ;?>" class="foobox iul_play_icon fbx-link fbx-instance" data-width="1920" data-height="1080"><img src="<?php echo $tour_image ;?>" loading="lazy" alt="View Listing information"></a>
+							*/
+									?>
+
+									<!-- Lite YouTube embed: renders poster image, swaps to iframe on click (autoplay) -->
+									<div class="youtube-lite-embed" data-yturl="<?php echo esc_url($tour_url); ?>" role="button"
+										aria-label="Play video">
+										<?php if (!empty($tour_image)) { ?>
+											<img class="youtube-lite-thumb" src="<?php echo esc_url($tour_image); ?>" loading="lazy"
+												alt="Video preview">
+										<?php } else { ?>
+											<div class="youtube-lite-thumb" style="background:#000;aspect-ratio:16/9;"></div>
+										<?php } ?>
+										<div class="youtube-lite-playbtn" aria-hidden="true">▶</div>
+										<noscript>
+											<iframe src="<?php echo esc_url($tour_url); ?>" width="100%" height="500"
+												allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+												allowfullscreen loading="lazy"
+												referrerpolicy="strict-origin-when-cross-origin"></iframe>
+										</noscript>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<!-- end HOME GALLERY TAB 1 - video tour-->
+
+					<?php } ?>
+
+
+					<!--HOME GALLERY TAB 2 - nexgen gallery-->
+					<?php
+					if (!empty($thegallerynumber)) { ?>
+						<div id="video_images_content_02" style="<?php echo $display_nexgen; ?>">
+
+							<?php if (!empty($thegallerynumber)) { ?>
+								<div id="photos" class="xiul_full_width">
+									<div class="isc_gallery_container">
+										<?php echo do_shortcode('[ngg src="galleries" ids="' . $thegallerynumber . '" display="pro_sidescroll"]'); ?>
+									</div>
+								</div>
+							<?php } ?>
+
+						</div>
+
+					<?php } ?>
+
+					<!--HOME GALLERY TAB 3 - zillow tour-->
+					<?php if (!empty($zillow_tour_url)) { ?>
+						<div id="video_images_content_03" style="<?php echo $display_zillow; ?>">
+
+
+							<iframe src="<?php echo $zillow_tour_url; ?>" width="100%" height="500" frameborder="0"
+								allowfullscreen="allowfullscreen"><span data-mce-type="bookmark"
+									style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;"
+									class="mce_SELRES_start">﻿</span></iframe>
+
+						</div>
+					<?php } ?>
+					<!--end HOME GALLERY TAB 3 - zillow tour-->
+
+				</div><!--end video_images_controls_wrap-->
+
+			</div><!--<div class="isc_section isc_property_information isc_description">-->
+		</div><!--<div class="isc_content_wrap">-->
+
+		<script>
+			jQuery(document).ready(function () {
+				jQuery("#video_images_control_01").click(function () {
+					jQuery("#video_images_content_01").show();
+					jQuery("#video_images_content_02").hide();
+					jQuery("#video_images_content_03").hide();
+
+					jQuery("#video_images_control_01").addClass("video_images_control_on");
+					jQuery("#video_images_control_02").removeClass("video_images_control_on");
+					jQuery("#video_images_control_03").removeClass("video_images_control_on");
+
+				});
+
+				jQuery("#video_images_control_02").click(function () {
+					jQuery("#video_images_content_02").show();
+					jQuery("#video_images_content_01").hide();
+					jQuery("#video_images_content_03").hide();
+
+					jQuery("#video_images_control_02").addClass("video_images_control_on");
+					jQuery("#video_images_control_01").removeClass("video_images_control_on");
+					jQuery("#video_images_control_03").removeClass("video_images_control_on");
+
+				});
+
+				jQuery("#video_images_control_03").click(function () {
+					jQuery("#video_images_content_03").show();
+					jQuery("#video_images_content_01").hide();
+					jQuery("#video_images_content_02").hide();
+
+					jQuery("#video_images_control_03").addClass("video_images_control_on");
+					jQuery("#video_images_control_01").removeClass("video_images_control_on");
+					jQuery("#video_images_control_02").removeClass("video_images_control_on");
+
+				});
+
+			});
+		</script>
+
+	<?php } ?>
+
+	<!--end HOME GALLERY-->
+
+	<div class="isc_section isc_property_information isc_features">
+		<div class="isc_content_wrap">
+			<div class="isc_label">
+				<h2>Details</h2>
+			</div>
+			<div class="isc_content">
+
+
+				<div class="isc_details_grid">
+					<div class="isc_details_col isc_details_left">
+						<?php
+						// Left: Price, Beds, Baths
+						if (!empty($price_sold) || $price_sold === "0") {
+							echo '<div class="isc_item isc_price_sold"><h3>Price Sold: ' . ($price_sold === "0" ? 'undisclosed' : '$' . number_format((int) $price_sold, 0, '', ',')) . '</h3></div>';
+						} elseif (!empty($price) || $price === "0") {
+							echo '<div class="isc_item isc_price"><h3>Price: ' . ($price === "0" ? 'undisclosed' : '$' . number_format((int) $price, 0, '', ',')) . '</h3></div>';
+						}
+						if (!empty($beds)) {
+							echo '<div class="isc_item isc_beds"><h4>Beds: ' . $beds . '</h4></div>';
+						}
+						if (!empty($baths)) {
+							echo '<div class="isc_item isc_baths"><h4>Baths: ' . $baths . '</h4></div>';
+						}
+						?>
+					</div>
+
+					<div class="isc_details_col isc_details_right">
+						<?php
+						// Right: Status, Heated SF, Year Built, MLS#
+						if (!empty($status)) {
+							echo '<div class="isc_item isc_status"><h4>Status: ' . $status . '</h4></div>';
+						}
+						if (!empty($sqft)) {
+							echo '<div class="isc_item isc_sqft"><h4>Heated SF: ' . $sqft . '</h4></div>';
+						}
+						if (!empty($yearbuilt)) {
+							echo '<div class="isc_item isc_yearbuilt"><h4>Year Built: ' . $yearbuilt . '</h4></div>';
+						}
+						if (!empty($mlsnumber)) {
+							echo '<div class="isc_item isc_mls_number"><h4>MLS#: ' . $mlsnumber . '</h4></div>';
+						}
+						?>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="isc_section isc_property_information isc_location">
+		<div class="isc_content_wrap">
+			<div class="isc_label">
+				<div class="isc_label_heading">
+					<?php /* TJS 2025-09-02 — Rename Location to Google Map */ ?>
+					<h2>Google Map</h2>
+				</div>
+			</div>
+			<div class="isc_content">
+				<div class="isc_content_inner">
+
+					<?php /* TJS 2025-09-02 — Address microdata for Google/SEO updated to RealEstateListing */ ?>
+					<div itemscope itemtype="https://schema.org/RealEstateListing">
+						<h3 class="isc_address" itemprop="address" itemscope
+							itemtype="https://schema.org/PostalAddress">
+							<?php if (!empty($address)) { ?><span
+									itemprop="streetAddress"><?php echo esc_html($address); ?></span><?php } ?>
+							<?php if (!empty($city)) { ?>, <span
+									itemprop="addressLocality"><?php echo esc_html($city); ?></span><?php } ?>
+							<?php if (!empty($state)) { ?>, <span
+									itemprop="addressRegion"><?php echo esc_html($state); ?></span><?php } ?>
+							<?php if (!empty($zip)) { ?> <span
+									itemprop="postalCode"><?php echo esc_html($zip); ?></span><?php } ?>
+						</h3>
+					</div>
+
+
+					<?php /* TJS 2025-09-02 — Move map into this section */ ?>
+					<?php if ($address != '' && $zip != '') { ?>
+						<div id="map" class="isc_map_location iul_full_width">
+							<?php if ($map_code != '') {
+								echo $map_code;
+							} else { ?>
+								<iframe title="Google Map of property location"
+									src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<?php echo str_replace(' ', '+', $address); ?>+<?php echo $zip; ?>&amp;ie=UTF8&amp;z=14&iwloc=near&addr&amp;output=embed"
+									allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<?php } ?>
+						</div>
+					<?php } ?>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="isc_section isc_property_information isc_description">
+		<div class="isc_content_wrap">
+			<div class="isc_label">
+				<div class="isc_label_heading">
+					<h2>Description</h2>
+				</div>
+				<?php /* Hidden : will use if needed at later date
+ <div class="isc_label_content">
+	 <div class="isc_label_link1"><a href="https://youtu.be/q8okMKrV2aY?autoplay=1&autohide=1&fs=1&rel=0&hd=1&wmode=transparent&enablejsapi=1&html5=1" class="foobox" data-width="1920" data-height="1080"><i class="fa-regular fa-circle-play"></i> Virtual Tour</a></div>
+ </div>
+ */
+				?>
+			</div>
+			<div class="isc_content">
+				<div class="isc_the_content"><?php the_content(__('Read more')); ?></div>
+				<?php if (!empty($tour_url) && empty($tour_image)) { ?>
+					<div class="isc_content_links"><a href="<?php echo $tour_url; ?>"
+							class="iul_button_ghost isc_dark foobox" data-width="1920" data-height="1080">Virtual Tour</a>
+					</div>
+				<?php }
+				?>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<?php if (!empty($agent)) { ?>
+		<div id="contact" class="isc_agent_card_container">
+			<div class="wrap">
+				<?php echo do_shortcode('[mdao_agentroster_display number_of_posts="2" order_by="last_name" ids="' . $agent . '" layout="results1" class="isc_content_center isc_align_center"]'); ?>
+			</div>
+		</div>
+	<?php } ?>
+
+
+	<?php /* TJS 2025-09-02 — Map moved into Location section above. Keeping old block for reference.
+if ($address != '' && $zip != '') { ?>
+<div id="map" class="isc_map_location iul_full_width">
+<?php if ($map_code != '') { echo $map_code; } else { ?>
+ <iframe title="Google Map of property location" src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<?php echo str_replace(' ', '+', $address); ?>+<?php echo $zip; ?>&amp;ie=UTF8&amp;z=14&iwloc=near&addr&amp;output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<?php } ?>
+</div>
+<?php } */ ?>
+
+
+
+</div>
+
+<?php // Check if the 'featured' parameter exists in the URL
+if (isset($_GET['featured'])) { ?>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var link = document.querySelector('.header_left_widget a');
+			if (link) {
+				var container = document.createElement('div');
+				container.innerHTML = link.innerHTML;
+				container.className = link.className;
+				link.parentNode.replaceChild(container, link);
+			}
+		});
+	</script>
+<?php } ?>

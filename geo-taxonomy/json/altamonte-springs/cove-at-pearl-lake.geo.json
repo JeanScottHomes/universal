@@ -1,0 +1,15 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"name": "Cove at Pearl Lake"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [ [-81.4266971,28.6644049] ]
+        ]
+      }
+    }
+  ]
+}

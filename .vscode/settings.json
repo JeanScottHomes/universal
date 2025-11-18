@@ -1,0 +1,6 @@
+{
+    "workbench.localHistory.maxFileEntries": 9999,
+    "workbench.localHistory.maxFileSize": 1024,
+    "workbench.localHistory.mergeWindow": 60,
+    "gitHistory.includeRemoteBranches": true
+}

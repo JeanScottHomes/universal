@@ -1,0 +1,1526 @@
+/* 
+Core Add-on Styles
+Description: Common styles used on IDXCentral add-ons
+Author: IDXCentral (Mark Moineau)
+Company Website: http://www.idxcentral.com
+Version: 3.0.1
+Updated: 2023-01-15
+*/
+
+/* Add-on:  General styles
+------------------------------------------------------------ */
+.gen_results_c {
+	border-bottom: 1px solid #e5e5e5;
+	border-radius: 4px;
+	margin: 0 0 20px;
+	padding: 0 0 10px;
+}
+
+.gen_results_c h3 {
+	font-size: 1.3em;
+	font-weight: bold !important;
+	margin: 0 !important;
+	padding: 0 0 3px !important;
+}
+
+.gen_results_c h3 a {
+	border: medium none;
+	text-decoration: none !important;
+}
+
+.gen_results_c h3 a:hover {
+	color: #777 !important;
+}
+
+.gen_results_c a img {
+	border: 1px solid #e5e5e5;
+	float: left;
+	margin: 0 20px 10px 0;
+}
+
+.gen_main_cw {
+	margin: 0 0 10px;
+}
+
+.gen_main_cw p {
+	padding: 0;
+} /* was originally 20px on the bottom */
+.gen_main_c {
+	padding: 0 0 20px;
+}
+
+h1.idxc_posttype_pageheading {
+	margin: 0 0 25px !important;
+}
+
+.gen_content_container p {
+	padding: 0 0 20px;
+}
+
+.idxc_dsp_gallery .gen_results_wrap_inner > a {
+	display: block;
+	line-height: 1px;
+	position: relative;
+}
+
+.idxc_dsp_gallery .gen_results_c {
+	border-bottom: medium none;
+	border-radius: 0;
+	display: table;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 25%;
+}
+
+.idxc_dsp_gallery .gen_results_c:nth-of-type(4n + 1) {
+	clear: both;
+}
+
+.idxc_dsp_gallery .gen_results_c a img {
+	border: medium none;
+	float: none;
+	margin: 0;
+	width: 100%;
+}
+
+.idxc_dsp_gallery .gen_results_wrap_inner {
+	background: none repeat scroll 0 0 #fff;
+	border-radius: 0;
+	display: block;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: auto;
+}
+
+#idxc_fn_mainwrap.idxc_dsp_gallery .gen_results_wrap_inner {
+	background: #000;
+	border-radius: 0;
+	display: block;
+	font-size: 0;
+	height: auto;
+	line-height: 1;
+	margin: 0; /* overflow: hidden; */
+	padding: 0;
+	position: relative;
+	width: auto;
+}
+
+.idxc_dsp_gallery .gen_results_c h3 {
+	font-size: 18px;
+	font-weight: normal !important;
+	margin: 0 !important;
+	padding: 8px 0 9px !important;
+	text-align: center;
+}
+
+.idxc_dsp_gallery .gen_results_c h3 a {
+	display: inline-block;
+	padding: 0 10px;
+}
+
+.idxc_dsp_gallery .gen_results_imgth > a {
+	display: block;
+	line-height: 1px;
+}
+
+.idxc_dsp_gallery .gen_results_imgth {
+	float: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+.idxc_dsp_gallery .gen_results_c {
+	margin: 0 10px 10px 0;
+	width: calc(25% - 10px);
+}
+
+.idxc_dsp_gallery .gen_results_link_wrap {
+	display: block;
+	line-height: 1;
+}
+
+/* Add-on: Listings, Rentals (general styles)
+------------------------------------------------------------ */
+.idxc_fl_mainwrap a.gen_results_link {
+	display: block;
+	text-decoration: none;
+}
+
+.idxc_fl_mainwrap a.gen_results_link h2 {
+	font-size: 18px;
+	font-weight: 400;
+	margin: 0 0 8px;
+}
+
+.gen_results_imgth {
+	float: left;
+	margin: 0 20px 10px 0;
+	padding: 0;
+	position: relative;
+}
+
+.gen_results_c .gen_results_imgth a img {
+	margin: 0;
+}
+
+.gen_status_sm {
+	background: none repeat scroll 0 0 #333;
+	border-bottom-left-radius: 7px;
+	clear: both;
+	color: #fff;
+	font-family: arial;
+	font-size: 12px;
+	padding: 3px 7px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.gen_status_large_status {
+	background: none repeat scroll 0 0 #333;
+	background: none repeat scroll 0 0 rgb(0 0 0 / 70%);
+	clear: both;
+	color: #fff;
+	font-family: arial;
+	font-size: 16px;
+	left: 0;
+	padding: 8px 20px 8px 15px;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+}
+
+.gen_results_img_large {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.gen_status_large {
+	background: url('../images/red-ribbon-bklarge.png') no-repeat scroll 0 0 transparent;
+	color: #fff;
+	float: left;
+	font-family: arial;
+	font-size: 18px;
+	height: 57px;
+	left: -8px;
+	margin: 0;
+	padding: 0 0 0 9px;
+	position: absolute;
+	top: 20px;
+}
+
+.gen_status_large_text {
+	background: url('../images/red-ribbon-bklarge-right.png') no-repeat scroll right top transparent;
+	height: 43px;
+	margin: 0;
+	padding: 14px 28px 0 11px;
+}
+
+#idxc_fl_mainwrap {
+	/* clear: both; overflow: hidden; */
+}
+
+/* gallery view */
+.idxc_dsp_gallery .idxc_fl_description {
+	display: none;
+}
+
+.idxc_fl_mainwrap.idxc_dsp_gallery .gen_results_c h3 {
+	text-align: left;
+}
+
+.idxc_fl_mainwrap.idxc_dsp_gallery .gen_results_c h3 a {
+	padding: 0;
+}
+
+.idxc_fl_mainwrap.idxc_dsp_gallery .gen_results_wrap_inner {
+	font-size: 16px;
+}
+
+/* Add-on: Listings, Rentals (property details) */
+#pd_mainwrap {
+	margin: 0;
+	padding: 0;
+}
+
+#pd_mainwrap .ngg-singlepic {
+	border: 1px solid #e5e5e5;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+#pd_mainwrap h2,
+#pd_mainwrap h3 {
+	border-bottom: 1px solid #c0c0c0 !important;
+	margin: 0 0 10px !important;
+	padding: 0 0 5px !important;
+}
+
+#pd_specs {
+	margin: 0 0 40px;
+	overflow: hidden;
+	padding: 0;
+	width: auto;
+}
+
+#pd_specs strong {
+	color: #333;
+}
+
+#pd_gmap {
+	border: 1px solid #c0c0c0;
+	clear: both;
+	display: block;
+	line-height: 1px;
+	margin: 0 0 12px;
+	overflow: hidden;
+	padding: 0;
+}
+
+.pd_outer_wrap {
+	margin: 0;
+	padding: 40px 0 10px;
+}
+
+#pd_gallery {
+	margin: 0;
+	padding: 40px 0 10px;
+}
+
+#pd_mapspec_cont {
+	margin: 0;
+	padding: 10px 0 0;
+}
+
+#pd_gmap iframe {
+	height: 375px;
+	margin: 0;
+	width: 100%;
+}
+
+.pd_listing_image_container {
+	height: auto;
+	margin: 0 0 12px;
+	overflow: hidden;
+	width: auto;
+}
+
+/* Featured Listings add-on - Style: standard_grid (Basic grid layout) -- Start */
+.ao_fl_gs_basic {
+	display: grid;
+	display: grid;
+	-ms-grid-columns: 1fr 15px 1fr 15px 1fr;
+	grid-gap: 15px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.ao_fl_gs_basic img.ao_fl_image {
+	object-fit: cover;
+	object-fit: cover;
+	width: 100%;
+}
+
+.ao_fl_gs_basic .cust_special_wrap {
+	position: relative;
+}
+
+.ao_fl_gs_basic .ao_fl_text {
+	background: #000;
+	background: var(--main-primary-color);
+	color: #fff;
+	color: var(--main-primary-color-text-light);
+	line-height: 1.5;
+	padding: 2px 7px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: auto;
+}
+
+.ao_fl_gs_basic .ao_fl_info_wrap {
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	display: flexbox;
+	display: flex;
+	flex-direction: column;
+	flex-direction: column;
+	text-align: left;
+}
+
+.ao_fl_gs_basic span.ao_fl_price {
+	-webkit-box-ordinal-group: 2;
+	-ms-flex-order: 1;
+	order: 1;
+}
+
+.ao_fl_gs_basic span.ao_fl_address {
+	-webkit-box-ordinal-group: 3;
+	-ms-flex-order: 2;
+	order: 2;
+}
+
+.ao_fl_gs_basic span.ao_fl_city_state_zip {
+	-webkit-box-ordinal-group: 4;
+	-ms-flex-order: 3;
+	order: 3;
+}
+
+.ao_fl_gs_basic span.ao_fl_info_line1 {
+	-webkit-box-ordinal-group: 5;
+	-ms-flex-order: 4;
+	order: 4;
+}
+
+.ao_fl_gs_basic .ao_fl_image_container {
+	overflow: hidden;
+	padding-top: 65%;
+	position: relative;
+}
+
+.ao_fl_gs_basic img.ao_fl_image {
+	inset: 0;
+	height: 100%;
+	object-fit: cover;
+	object-fit: cover;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+}
+
+.ao_fl_gs_basic a {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+}
+
+.smao_flex.ao_fl_gs_basic {
+	place-content: stretch center;
+	align-items: stretch;
+	-webkit-box-align: stretch;
+	-webkit-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: center;
+	display: -webkit-box;
+	display: flexbox;
+	display: flex;
+	-ms-flex-align: stretch;
+	flex-flow: row wrap;
+	flex-flow: row wrap;
+	-ms-flex-line-pack: stretch;
+	-ms-flex-pack: center;
+	-ms-grid-columns: unset;
+	grid-gap: unset;
+	grid-template-columns: unset;
+}
+
+.smao_flex.ao_fl_gs_basic .ao_fl_wrap_inner {
+	height: 100%;
+}
+
+.smao_flex.ao_fl_gs_basic .ao_fl_wrap_outer {
+	padding: 0 10px 20px;
+	width: 33.33%;
+}
+
+@media only screen and (width <= 1023px) {
+	.ao_fl_gs_basic {
+		-ms-grid-columns: 1fr 15px 1fr;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.smao_flex.ao_fl_gs_basic .ao_fl_wrap_outer {
+		width: 50%;
+	}
+}
+
+@media only screen and (width <= 767px) {
+}
+
+@media only screen and (width <= 600px) {
+	.ao_fl_gs_basic {
+		-ms-grid-columns: 1fr;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.smao_flex.ao_fl_gs_basic .ao_fl_wrap_outer {
+		width: 100%;
+	}
+}
+
+@media only screen and (width <= 475px) {
+}
+
+/* Featured Listings add-on - Style: standard_grid (Basic grid layout) == End */
+
+/* Featured Neighborhoods add-on - Style: standard_grid (Basic grid layout) -- Start */
+.ao_fn_gs_gridstandard {
+	display: grid;
+	display: grid;
+	-ms-grid-columns: 1fr 0 1fr 0 1fr;
+	grid-gap: 0;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.ao_fn_gs_gridstandard .ao_fn_wrap_inner {
+	background: #000;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+.ao_fn_gs_gridstandard .ao_fn_image_container {
+	background: #000;
+	height: 100%;
+	line-height: 0;
+	overflow: hidden;
+	padding-top: 65%;
+	position: relative;
+}
+
+.ao_fn_gs_gridstandard .ao_fn_text_overlay {
+	align-items: flex-end;
+	bottom: 0;
+	-webkit-box-align: end;
+	-webkit-box-pack: start;
+	color: #fff;
+	color: var(--main-primary-color-text-light);
+	display: -webkit-box;
+	display: flexbox;
+	display: flex;
+	-ms-flex-align: end;
+	-ms-flex-pack: start;
+	height: 100%;
+	justify-content: flex-start;
+	left: 0;
+	line-height: 1.25;
+	overflow: hidden;
+	padding: 15px;
+	position: absolute;
+	text-align: left;
+	width: 100%;
+	z-index: 1;
+}
+
+.ao_fn_gs_gridstandard a.ao_fn_primary_link {
+	display: block;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+
+.ao_fn_gs_gridstandard .ao_fn_wrap_inner a:hover img {
+	transform: scale(1.1);
+}
+
+.ao_fn_gs_gridstandard .ao_fn_wrap_inner img.ao_fn_image {
+	height: 100%;
+	left: 0;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	transition: transform 0.5s ease-in-out;
+	width: 100%;
+}
+
+.ao_fn_gs_gridstandard .ao_fn_image_container::after {
+	background: rgb(0 0 0);
+	background: linear-gradient(
+		180deg,
+		rgb(0 0 0 / 4.11%) 40%,
+		rgb(0 0 0 / 82.8%) 100%
+	);
+	background: linear-gradient(
+		180deg,
+		rgb(0 0 0 / 4.11%) 40%,
+		rgb(0 0 0 / 82.8%) 100%
+	);
+	background: linear-gradient(
+		180deg,
+		rgb(0 0 0 / 4.11%) 40%,
+		rgb(0 0 0 / 82.8%) 100%
+	);
+	inset: 0;
+	content: '';
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+.ao_fn_gs_gridstandard .ao_fn_text_title {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.smao_flex.ao_fn_gs_gridstandard {
+	place-content: center center;
+	align-items: center;
+	-webkit-box-align: center;
+	-webkit-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: center;
+	display: -webkit-box;
+	display: flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	flex-flow: row wrap;
+	flex-flow: row wrap;
+	-ms-flex-line-pack: center;
+	-ms-flex-pack: center;
+	grid-gap: unset;
+}
+
+.smao_flex.ao_fn_gs_gridstandard .ao_fn_wrap_outer {
+	padding: 0 2.5px 8px;
+	width: 33.33%;
+}
+
+.smao_fn_standardgrid_1.ao_fn_gs_gridstandard {
+	-ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
+	grid-gap: 10px;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.smao_fn_box_border.ao_fn_gs_gridstandard a.ao_fn_primary_link::before {
+	border: 1px solid #fff;
+	content: '';
+	height: calc(100% - 30px);
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	transform: translate3d(-50%, -50%, 0);
+	transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	width: calc(100% - 30px);
+	z-index: 1;
+}
+
+.smao_fn_box_border.ao_fn_gs_gridstandard a.ao_fn_primary_link:hover::before {
+	height: calc(100% - 30px);
+	width: calc(100% - 30px);
+}
+
+@media only screen and (width <= 1023px) {
+	.ao_fn_gs_gridstandard {
+		display: grid;
+		display: grid;
+		-ms-grid-columns: 1fr 0 1fr;
+		grid-gap: 0;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.smao_flex.ao_fn_gs_gridstandard .ao_fn_wrap_outer {
+		width: 50%;
+	}
+
+	.smao_fn_standardgrid_1.ao_fn_gs_gridstandard {
+		-ms-grid-columns: 1fr 10px 1fr;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (width <= 767px) {
+}
+
+@media only screen and (width <= 600px) {
+	.ao_fn_gs_gridstandard {
+		display: grid;
+		display: grid;
+		-ms-grid-columns: 1fr;
+		grid-gap: 0;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.smao_flex.ao_fn_gs_gridstandard .ao_fn_wrap_outer {
+		width: 100%;
+	}
+
+	.smao_fn_standardgrid_1.ao_fn_gs_gridstandard {
+		-ms-grid-columns: 1fr;
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media only screen and (width <= 475px) {
+}
+
+/* Featured Neighborhoods add-on - Style: standard_grid (Basic grid layout) == End */
+
+/* Add-on: Neighborhoods (area profile)
+------------------------------------------------------------ */
+#arp_mainwrap {
+	margin: 0;
+	padding: 0;
+}
+
+#arp_mainwrap .ngg-singlepic {
+	border: 6px solid #e5e5e5;
+	margin: 0 0 10px;
+	padding: 1px !important;
+}
+
+#arp_quicksearch h3 {
+	font-size: 1.25em;
+	font-weight: bold;
+	margin: 0 0 5px;
+	padding: 0;
+}
+
+#arp_quicksearch {
+	background: none repeat scroll 0 0 #f8f8f8;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	box-shadow: 2px 3px 5px #ccc;
+	margin: 0;
+	overflow: hidden;
+	padding: 10px 15px;
+}
+
+#arp_quicksearch div {
+	float: left;
+	line-height: 20px;
+	padding: 0 10px 0 1px;
+}
+
+#arp_quicksearch div label {
+	color: #533c28;
+	font-size: 12px;
+}
+
+#arp_quicksearch div .title {
+	font-weight: bold;
+}
+
+#arp_quicksearch div select {
+	border: 1px solid #bebaa7;
+	color: #5a504a;
+	padding: 2px;
+}
+
+#arp_quicksearch div .size1 {
+	width: 215px;
+}
+
+#arp_quicksearch div .size2 {
+	width: 115px;
+}
+
+#arp_quicksearch div .size3 {
+	width: 58px;
+}
+
+#arp_quicksearch div .size4 {
+	width: 105px;
+}
+
+#arp_quicksearch div#search {
+	padding-top: 19px;
+	width: 35px;
+}
+
+#arp_quicksearch div#search a {
+	color: #5a504a;
+	text-decoration: none;
+}
+
+#arp_go {
+	background: #5a504a;
+	border: 1px solid #bebaa7;
+	color: #e5e5e5 !important;
+	font-weight: bold;
+	padding: 3px 4px;
+}
+
+#arp_gallery {
+	margin: 0;
+	padding: 0 0 10px;
+}
+
+#arp_mainwrap .ngg-singlepic {
+	border: 6px solid #e5e5e5;
+	margin: 0 0 20px 20px;
+	padding: 1px !important;
+}
+
+.arp_ao_image_container {
+	border: 1px solid #ddd;
+	margin: 0 0 5px;
+	padding: 4px;
+}
+
+.arp_shadow .arp_ao_image_container {
+	background: none repeat scroll 0 0 #f5f5f5;
+	border: 1px solid #eee;
+	box-shadow: 2px 2px 5px #e0e0e0;
+	margin: 0 0 10px;
+}
+
+.arp_ao_image_crop {
+	height: 80px;
+	overflow: hidden;
+	width: 125px;
+}
+
+.arp_outerwrap_listings {
+	margin: 40px 0 0;
+}
+
+.arp_slideshow {
+	background: #fff;
+	box-shadow: 0 0 2px 2px rgb(230 230 230 / 75%);
+	box-shadow: 0 0 2px 2px rgb(230 230 230 / 75%);
+	box-shadow: 0 0 2px 2px rgb(230 230 230 / 75%);
+	float: right;
+	margin: 0 0 30px 30px;
+	padding: 10px;
+	width: 500px;
+}
+
+x.arp_slideshow_outer {
+	background: transparent;
+	border: 1px solid #efe2be;
+	border: 1px solid 1px solid rgb(239 226 190 / 51%);
+	display: inline-block;
+	float: right;
+	margin: 0 0 30px 30px;
+	padding: 30px;
+}
+
+.single-idxc_neighborhood .fa.fa-times-circle {
+	font-size: 28px;
+}
+
+.single-idxc_neighborhood .ngg-trigger-buttons {
+	display: block;
+	margin: 5px 0 0 !important;
+	width: 100% !important;
+}
+
+/* gallery view */
+#idxc_fn_mainwrap.idxc_dsp_gallery .gen_results_c h3 {
+	bottom: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+.idxc_dsp_gallery .idxc_fn_description {
+	display: none;
+	font-size: 0.95em;
+	line-height: 1.35em;
+}
+
+/* Add-on: Neighborhoods (SEO - RSS feed, property list on main neighborhood profile page)
+------------------------------------------------------------ */
+.clearfix {
+	clear: both;
+	float: none !important;
+	margin: 0;
+	padding: 0;
+}
+
+#idxc_pr_main {
+	margin: 0;
+	padding: 0;
+}
+
+#idxc_pr_main h3 {
+	font-size: 12px !important;
+	font-weight: bold !important;
+	margin: 0;
+	padding: 0;
+}
+
+#wrap h2#idxc_pr_heading {
+	color: #202020;
+	float: left;
+	font-size: 1.5em;
+	line-height: 1.25em;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.idxc_pr_cont {
+	border-bottom: 1px solid #e5e5e5;
+	margin: 0 0 10px;
+	padding: 0 0 15px;
+}
+
+.idxc_pr_img {
+	float: left;
+	margin: 0;
+	padding: 0 10px 0 0;
+}
+
+.idxc_pr_img img {
+	border: 2px solid #e5e5e5;
+	height: 112px;
+	width: 150px;
+}
+
+.idxc_pr_info {
+	float: left;
+	margin: 0;
+	overflow: hidden;
+	padding: 0 10px 0 0;
+	width: 325px;
+}
+
+.idxc_pr_addr {
+	clear: both;
+	white-space: nowrap;
+}
+
+.idxc_pr_details span {
+	padding: 0 5px 0 0;
+}
+
+.idxc_pr_desc {
+	padding: 5px 0 0;
+}
+
+.idxc_pr_price_cont {
+	float: right;
+	width: 93px;
+}
+
+.idxc_pr_price {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 2px 0 0;
+	text-align: right;
+}
+
+.idxc_pr_logo {
+	padding: 20px 0 0;
+}
+
+a.idxc_allproplink {
+	background: none repeat scroll 0 0 #e5e5e5;
+	border: 1px solid #bebaa7;
+	border-radius: 3px;
+	box-shadow: 2px 2px 2px #e5e5e5;
+	color: #202020 !important;
+	float: right;
+	font-weight: normal;
+	margin: 0 0 10px;
+	padding: 3px 10px;
+	text-decoration: none;
+}
+
+a:hover.idxc_allproplink {
+	background-color: #f5f5f5 !important;
+	color: #202020 !important;
+}
+
+/* Add-on: Neighborhoods (SEO profile page)
+------------------------------------------------------------ */
+
+/* Add-on: Neighborhoods (list layout)
+------------------------------------------------------------ */
+.idxc_dsp_gallery-buttons {
+	display: flex;
+	display: flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.idxc_dsp_gallery-buttons > div {
+	border-bottom: 2px solid #bfbfc0;
+	border-top: 2px solid #bfbfc0;
+	margin-bottom: 35px;
+	padding: 0;
+	width: calc(50% - 45px);
+}
+
+.idxc_dsp_gallery-buttons > div:nth-child(odd) {
+	margin-right: 45px;
+}
+
+.gen_results_wrap_inner_list {
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.gen_results_wrap_inner_list a {
+	text-decoration: none;
+}
+
+.gen_results_list {
+	flex-direction: column;
+	justify-content: center;
+}
+
+.idxc_archive_description {
+	margin-bottom: 40px;
+}
+
+/* Add-on: Neighborhoods (list layout end)
+------------------------------------------------------------ */
+
+.idxcc_pprofile_img {
+	border: 6px solid #e5e5e5;
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+
+.idxcc_pprofile_info {
+	float: left;
+	margin: 0;
+	width: 290px;
+}
+
+.idxcc_pprofile_details {
+}
+
+.idxcc_pprofile_details span {
+	padding: 0 5px 0 0;
+}
+
+.idxcc_pprofile_details table th,
+.idxcc_pprofile_details table td {
+	border-bottom: 1px dashed #d0d0d0;
+	border-collapse: collapse;
+	margin: 0;
+	padding: 1px;
+	text-align: left;
+	width: 125px;
+}
+
+.idxcc_pprofile_desc {
+	clear: both;
+	margin: 0;
+	padding: 15px 0 25px;
+}
+
+.idxcc_pprofile_desctitle {
+	border-bottom: 1px solid #d0d0d0;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 5px;
+	padding: 0 0 3px;
+}
+
+#idxcc_pprofile_disclaimer {
+	border-top: 1px solid #d0d0d0;
+	clear: both;
+	margin: 100px 0 10px;
+	padding: 10px 0 0;
+}
+
+.idxcc_pprofile_morelink {
+	display: inline-block;
+	margin: 0;
+	padding: 10px 0 0;
+}
+
+.idxcc_pprofile_morelink a,
+.idxcc_pprofile_morelink a:visited {
+	background: none repeat scroll 0 0 #f5f5f5;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	display: block;
+	margin: 0;
+	padding: 3px 5px;
+	text-decoration: none;
+}
+
+.idxcc_pprofile_morelink a:hover {
+	background: #e5e5e5;
+	color: #900;
+}
+
+.idxcc_pprofile_dlabel {
+	float: left;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	width: 100px;
+}
+
+#idxcc_pprofile_gmapframe {
+	border-width: 0;
+	height: 475px;
+	width: 625px;
+}
+
+#idxcc_pprofile_map {
+	clear: both;
+	height: 475px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: 625px;
+}
+
+ul#idxcc_neigh_list {
+	list-style-type: disc;
+	margin: 0 0 10px 20px;
+	padding: 10px 0 0;
+}
+
+ul#idxcc_neigh_list li {
+	margin: 0;
+	padding: 0 0 5px 5px;
+}
+
+/* Add-on: Testimonials
+------------------------------------------------------------ */
+#idxc_test_main {
+	margin: 0;
+	padding: 0;
+	width: 585px;
+}
+
+#idxc_test_main p {
+	padding-bottom: 0;
+}
+
+.idxc_test_cont {
+	background: none;
+	margin: 0 0 25px;
+	padding: 13px 5px 0 2px;
+}
+
+.idxc_test_imgc {
+	float: left;
+	max-width: 185px;
+	padding-right: 20px;
+	width: 25%;
+}
+
+.idxc_test_body {
+	/* background: url("../images/testimonial-quote-left.gif") no-repeat scroll left top rgba(0, 0, 0, 0); */
+	float: left;
+	padding: 10px 0 0 35px;
+}
+
+.idxc_test_body::before {
+	color: #e5e5e5;
+	content: '\201C';
+	float: left;
+	font-family: serif;
+	font-size: 64px;
+	font-weight: 900;
+	line-height: 1;
+	margin-left: -39px;
+	margin-top: -15px;
+}
+
+.idxc_test_body_wthumb {
+	width: 75%;
+}
+
+.idxc_test_bodyi {
+	/* background: url("../images/testimonial-quote-right.gif") 100% 90% no-repeat; padding: 0 35px 0 0; */
+	padding: 0;
+}
+
+.idxc_test_more {
+	clear: both;
+	display: block;
+	font-weight: bold;
+}
+
+.idxc_test_name {
+	clear: both;
+	display: block;
+	padding: 3px 0 0;
+}
+
+.idxc_test_clearfix {
+	clear: both;
+}
+
+.attachment-thumbnail_testimonials.wp-post-image {
+	border: 8px solid #e5e5e5;
+	margin: 0 25px 0 0;
+	padding: 2px;
+}
+
+/* Add-on: Testimonials (shortcode) */
+
+.md_testimonials_title_cont {
+	padding: 5px 5px 10px;
+}
+
+/* Add-on: Agent Roster (results)
+------------------------------------------------------------ */
+#agent_container {
+	border-bottom: #ccc dotted 1px;
+	float: left;
+	height: 110px;
+	margin: 0 0 20px;
+	padding: 0;
+	width: 201px;
+}
+
+#agent_container .agent_image img {
+	border: 2px solid #999;
+	float: left;
+	height: 87px;
+	margin: 0;
+	padding: 0;
+	width: 80px;
+}
+
+#agent_container .agent_data {
+	float: left;
+	height: 110px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 117px;
+}
+
+#agent_container .agent_data p {
+	color: #202020;
+	font-size: 11px;
+	line-height: 14px;
+	margin: 0;
+	padding: 0 2px 0 6px;
+	text-align: left;
+}
+
+#agent_container p.agentsname {
+	color: #5b5c42;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 12px;
+	margin: 0;
+	padding: 4px 0 4px 6px;
+	text-align: left;
+}
+
+/* Add-on: Agent Roster (profile page) */
+#agentp_header {
+	border-bottom: #ccc dotted 1px;
+	height: 100px;
+	margin: 0 0 15px;
+	padding: 0;
+	width: 100%;
+}
+
+#agentp_header #agentp_image img {
+	border: #999 solid 2px;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#agentp_header #agentp_contactinfo {
+	float: left;
+	height: 105px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 150px;
+}
+
+#agentp_header #agentp_contactinfo p {
+	color: #202020;
+	line-height: 16px;
+	margin: 0;
+	padding: 0 2px 0 6px;
+	text-align: left;
+}
+
+h2.agentp_h2 {
+	font-size: 16px !important;
+}
+
+#idxc_agentp_wrap .gform_wrapper {
+	background: #f9f9f9;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	margin: 10px 0;
+	padding: 5px 15px;
+}
+
+/* Add-on: Agent Roster (responsive)
+------------------------------------------------------------ */
+
+/* Agent Roster add-on - Style: standard_grid (Basic grid layout) == Start */
+.ao_agent_gs_gridstandard {
+	display: grid;
+	display: grid;
+	-ms-grid-columns: 1fr 15px 1fr 15px 1fr 15px 1fr 15px 1fr;
+	grid-gap: 30px 15px;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.ao_agent_gs_gridstandard .ma_agent_image > a {
+	background: none repeat scroll 0 0 #e5e5e5;
+	border: none;
+	display: block;
+	overflow: hidden;
+	padding-top: 125%;
+	position: relative;
+}
+
+.ao_agent_gs_gridstandard .ma_agent_image a img {
+	height: 100%;
+	left: 0;
+	margin: 0;
+	max-width: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.ao_agent_gs_gridstandard .ma_agent_data {
+	padding: 10px;
+}
+
+.ao_agent_gs_gridstandard .ma_agent_data span {
+	display: block;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+.ao_agent_gs_gridstandard .ma_agent_name {
+	background: rgb(0 0 0 / 50%);
+	bottom: 0;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	left: 0;
+	line-height: 1;
+	padding: 10px !important;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+
+.single-idxc_agent h1.entry-title {
+	margin: 0;
+}
+
+.single-idxc_agent .ma_agent_data span {
+	display: block;
+}
+
+.single-idxc_agent .ma_agent_data span.ma_agent_profile_link {
+	display: none;
+}
+
+.single-idxc_agent .ma_agentp_header {
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 15px;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+
+.single-idxc_agent .ma_agentp_header .ma_agent_wrap {
+	margin: 0;
+	padding: 0 0 10px;
+}
+
+.single-idxc_agent .ma_agentp_header .ma_agent_image {
+	display: inline-block;
+	line-height: 0;
+	margin: 0 15px 0 0;
+	max-width: 285px; /* min-width: 33%; */
+}
+
+.single-idxc_agent .ma_agentp_header .ma_agent_data {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.single-idxc_agent .ma_agentp_header .ma_agentp_image img {
+	border: #999 solid 2px;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.single-idxc_agent .ma_agentp_wrap .gform_wrapper {
+	background: #f9f9f9;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	margin: 10px 0;
+	padding: 5px 15px;
+}
+
+@media only screen and (width <= 1023px) {
+	.ao_agent_gs_gridstandard {
+		-ms-grid-columns: (1fr) [4];
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media only screen and (width <= 767px) {
+	.ao_agent_gs_gridstandard {
+		-ms-grid-columns: (1fr) [3];
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media only screen and (width <= 600px) {
+	.ao_agent_gs_gridstandard {
+		-ms-grid-columns: (1fr) [2];
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (width <= 475px) {
+	.ao_agent_gs_gridstandard {
+		-ms-grid-columns: (1fr) [1];
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+/* Agent Roster add-on - Style: standard_grid (Basic grid layout) == End */
+
+/* Call to Action Buttons
+------------------------------------------------------------ */
+.cta_button_wrap {
+	display: inline-block;
+	margin-right: 1%;
+	width: 49.5%;
+}
+
+.cta_button_wrap.last {
+	margin-right: 0;
+}
+
+.cta_button_wrap a.cta_button {
+	display: block;
+	margin: 0 0 10px;
+	padding: 9px 15px 10px;
+	text-align: center;
+}
+
+a.cta_button {
+	background: none repeat scroll 0 0 #2e3133;
+	border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	margin: 3px 20px 10px 0;
+	padding: 9px 15px 10px;
+	text-decoration: none;
+}
+
+a.cta_button:hover {
+	background: none repeat scroll 0 0 #52585b;
+	color: #fff;
+}
+
+/*
+Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (width <= 1139px) {
+}
+
+@media only screen and (width <= 1023px) {
+	.idxc_dsp_gallery .gen_results_c {
+		width: calc(50% - 10px);
+	}
+
+	.idxc_dsp_gallery .gen_results_c:nth-of-type(4n + 1) {
+		clear: none;
+	}
+
+	.idxc_dsp_gallery .gen_results_c:nth-of-type(2n + 1) {
+		clear: both;
+	}
+}
+
+@media only screen and (width <= 767px) {
+	.cta_button_wrap {
+		display: block;
+		width: 100%;
+	}
+
+	.arp_slideshow {
+		float: none;
+		margin: 0 0 30px;
+		width: auto;
+	}
+}
+
+@media only screen and (width <= 600px) {
+	.gen_results_c a img {
+		float: none;
+		margin: 0 0 10px;
+	}
+
+	.gen_results_imgth {
+		display: inline-block;
+		float: none;
+	}
+
+	#pd_specs {
+		float: none;
+		width: 100%;
+	}
+
+	#pd_gmap {
+		float: none;
+		width: 100%;
+	}
+
+	#pd_gmap iframe {
+		margin: 0;
+		width: 100%;
+	}
+
+	#arp_mainwrap .ngg-singlepic {
+		float: none;
+		margin: 0 0 10px;
+	}
+
+	.idxc_test_imgc {
+		float: none;
+		width: 100%;
+	}
+
+	.idxc_test_body {
+		margin: 20px 0;
+		width: 100%;
+	}
+
+	.idxc_dsp_gallery .gen_results_c {
+		width: 100%;
+	}
+
+	.idxc_dsp_gallery .gen_results_c:nth-of-type(2n + 1) {
+		clear: none;
+	}
+
+	.idxc_dsp_gallery-buttons > div:nth-child(odd) {
+		margin-right: 0;
+	}
+
+	.idxc_dsp_gallery-buttons > div {
+		width: 100%;
+	}
+
+	.idxc_dsp_gallery .gen_results_wrap_inner {
+		display: block;
+	}
+}
+
+@media only screen and (width <= 359px) {
+}

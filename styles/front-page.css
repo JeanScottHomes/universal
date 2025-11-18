@@ -1,0 +1,194 @@
+/* ========== FRONT PAGE STYLES (ALPHABETIZED) ========== */
+
+/* FRONT PAGE BLOCK */
+.front-page-block {
+	margin: 0 auto;
+	max-width: 1080px;
+	padding: 0;
+	text-align: left;
+}
+
+.front-page-block::after {
+	clear: both;
+	content: '';
+	display: table;
+}
+
+.front-page-block--image-left {
+	flex-direction: row;
+	padding: 0;
+}
+
+.front-page-block--image-left .signature-image:hover {
+	border: 1px solid rgb(0 0 0 / 100%);
+}
+
+.front-page-block--image-left .signature-image__caption a:hover {
+	color: rgb(0 125 184 / 100%);
+}
+
+.front-page-block--image-left .signature-image-container {
+	flex: unset;
+	float: left;
+	margin-left: 0;
+	padding: 0 1rem 1rem 0;
+}
+
+.front-page-block--image-right {
+	flex-direction: row-reverse;
+	padding: 0;
+}
+
+.front-page-block--image-right .signature-image:hover {
+	border: 1px solid rgb(0 0 0 / 100%);
+}
+
+.front-page-block--image-right .signature-image-container {
+	flex: unset;
+	float: right;
+	margin-right: 0;
+	padding: 0 0 1rem 1rem;
+}
+
+.front-page-block--image-right .signature-image__caption a:hover {
+	color: rgb(0 125 184 / 100%);
+}
+
+/* FRONT PAGE GRID */
+
+.front-page-grid {
+	box-sizing: border-box;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	justify-content: start;
+	margin: 0 auto;
+	max-width: 1080px;
+	padding: 0 0 1rem;
+	text-align: center;
+	width: 100%;
+}
+
+/* stylelint-disable-next-line no-descending-specificity -- Grid links are independent from block modifiers; keep grouped for readability. */
+.front-page-grid__item a {
+	text-decoration: none;
+}
+
+.front-page-grid__item .signature-image:hover {
+	border: 1px solid rgb(0 0 0 / 100%);
+}
+
+.front-page-grid__item .signature-image-container {
+	margin: 0 auto;
+}
+
+.front-page-grid-title {
+	background-color: rgb(255 255 0 / 2.5%);
+	border: 1px solid rgb(0 125 184 / 100%);
+	border-radius: 5px;
+	box-sizing: border-box;
+	color: rgb(0 0 0 / 87.5%);
+	display: block;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0.384rem 0 0;
+	padding: 0.384rem;
+	text-align: center;
+}
+
+h3.front-page-grid-title:hover {
+	border: 1px solid rgb(0 0 0 / 100%);
+	color: rgb(0 125 184 / 100%);
+}
+
+.front-page-grid-title-wrap {
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+/* FRONT PAGE HEADING */
+.front-page-heading {
+	margin: 0 auto;
+	max-width: 1080px;
+	padding: 1rem;
+	position: relative;
+	text-align: center;
+}
+
+.front-page-heading h1,
+.front-page-heading h2 {
+	font-weight: 100;
+	margin: 0;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.front-page-heading h2 span {
+	display: block;
+	font-size: 0.875em;
+	font-weight: 100;
+	letter-spacing: 0.1em;
+}
+
+.front-page-heading__subtitle {
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 100;
+	letter-spacing: 0.1em;
+	margin: 0.5rem 0 0;
+	text-transform: uppercase;
+}
+
+.front-page-heading h3 {
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 100;
+	letter-spacing: 0.1em;
+	margin: 0;
+	margin-bottom: 3px;
+	position: relative;
+	text-transform: uppercase;
+	z-index: 1;
+}
+
+.front-page-text {
+	align-self: flex-start;
+	flex: 1 1 400px;
+
+	/* min-width: 400px; */
+	margin: 0 auto;
+}
+
+.front-page-text p {
+	margin: 0;
+	padding: 0 0 1rem; /* Top, Right, Bottom, Left */
+}
+
+.front-page-wrap {
+	padding: 1rem;
+}
+
+/* ========== FRONT PAGE: 700px and Less ========== */
+@media screen and (width <= 700px) {
+	.front-page-block {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin: 0 auto;
+		max-width: 400px;
+		text-align: left;
+	}
+
+	.front-page-text {
+		align-self: unset;
+		flex: unset;
+		max-width: 646px;
+		min-width: unset;
+	}
+
+	.front-page-block .signature-image-container {
+		margin: 0;
+		padding: 0;
+	}
+}

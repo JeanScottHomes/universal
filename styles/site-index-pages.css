@@ -1,0 +1,77 @@
+.site-index-pages {
+  display: block;
+}
+
+.site-index-pages__section {
+  margin-bottom: 2rem;
+}
+
+
+.site-index-pages__heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: #1a1a1a;
+}
+
+.site-index-pages__heading a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-index-pages__heading a:hover,
+.site-index-pages__heading a:focus {
+  color: #007DB8;
+}
+
+.site-index-pages__subheading {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem;
+  color: #1a1a1a;
+}
+
+.site-index-pages__list {
+  margin: 0 0 1.5rem 1.25rem;
+  padding: 0;
+  list-style: disc;
+}
+
+.site-index-pages__list--nested {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.site-index-pages__list li,
+.site-index-pages__item {
+  line-height: 1.6;
+  margin: 0 0 0.5rem;
+}
+
+.site-index-pages__list li:last-child,
+.site-index-pages__item:last-child {
+  margin-bottom: 0;
+}
+
+.site-index-pages__list li a,
+.site-index-pages__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-index-pages__list li a:hover,
+.site-index-pages__list li a:focus,
+.site-index-pages__link:hover,
+.site-index-pages__link:focus {
+  color: #007DB8;
+}
+
+@media (width <= 767px) {
+  .site-index-pages__heading {
+    font-size: 24px;
+  }
+
+  .site-index-pages__subheading {
+    font-size: 20px;
+  }
+}

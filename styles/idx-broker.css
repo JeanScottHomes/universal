@@ -1,0 +1,1720 @@
+/*
+IDX Broker Styles
+Solution: Platinum
+IDXCentral Template: San Francisco+
+Version: 2.0.0
+Copyright: Moineau Design, LLC - IDXCentral.com
+*/
+
+/* IDXBroker modifications------------------------------------------------------------ */
+#IDX-main {
+	padding: 0 40px 20px;
+}
+
+#IDX-main,
+#IDX-main p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	width: auto;
+}
+
+#IDX-main strong {
+	font-weight: bold;
+}
+
+#IDX-main select,
+#IDX-main textarea,
+#IDX-main input[type='text'] {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	font-family: arial, sans-serif;
+	padding: 8px;
+}
+
+#IDX-main .IDX-page-mortgage select,
+#IDX-main .IDX-page-mortgage textarea,
+#IDX-main .IDX-page-mortgage input[type='text'] {
+	height: initial;
+	line-height: initial;
+}
+
+#IDX-main .IDX-perPageForm select {
+	padding: 2px 3px;
+}
+
+.IDX-page-homes #IDX-search-row-content select,
+.IDX-page-homes #IDX-search-row-content textarea,
+.IDX-page-homes #IDX-search-row-content input[type='text'] {
+	width: 100%;
+}
+
+.IDX-control-label,
+#IDX-addressLabel {
+	font-weight: bold;
+}
+
+.IDX-wrapper-standard .IDX-control-group,
+.IDX-wrapper-standard #IDX-registration .IDX-control-group {
+	width: 165px;
+}
+
+.IDX-controls select {
+	width: 100%;
+}
+
+.IDX-formBtn,
+.IDX-page-mapsearch .IDX-mapButton,
+.IDX-refineSubmitWrap input,
+button#IDX-rosterFilterSubmit {
+	background: none repeat scroll 0 0 #333;
+	border: 0 none;
+	border-radius: 5px;
+	color: #fff;
+	font-family: arial;
+	font-size: 1.25em !important;
+	font-weight: normal;
+	line-height: normal !important;
+	margin: 0 !important;
+	padding: 6px 20px;
+	text-transform: none;
+}
+
+.IDX-refineSubmitWrap input {
+	padding: 10px 20px;
+}
+
+/* .IDX-formBtn, .IDX-page-mapsearch .IDX-mapButton, .IDX-refineSubmitWrap input{background:none repeat scroll 0 0 #333333;border:1px solid #999999;border-radius:5px 5px 5px 5px;color:#FFFFFF;font-family:arial;font-size:13px;font-weight:normal;height:26px;line-height:20px;padding:3px 0 2px;width:92px;}
+*/
+.IDX-row-content {
+}
+
+#IDX-searchNavList.IDX-listAsRow li,
+#IDX-detailsTopLinks div.IDX-topLink,
+#IDX-prevProp,
+#IDX-nextProp,
+#IDX-detailsGalleryLink,
+#IDX-resultsTopLinks .IDX-topLink {
+	background: none repeat scroll 0 0 #f1f1f1;
+	-moz-border-bottom-colors: none;
+	border-color: #eee #ccc #ccc #eee;
+	border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	border-style: solid;
+	-moz-border-top-colors: none;
+	border-width: 1px;
+	display: inline-block;
+	font-size: 1em;
+	line-height: 1em;
+	margin: 0 5px 5px 0;
+	min-width: 130px;
+	padding: 0;
+	text-align: center;
+}
+
+#IDX-searchNavList .IDX-searchNavItem a,
+#IDX-searchNavList .IDX-searchNavLink,
+#IDX-detailsTopLinks div.IDX-topLink a,
+#IDX-prevProp a,
+#IDX-nextProp a,
+#IDX-detailsGalleryLink a,
+#IDX-resultsTopLinks .IDX-topLink a,
+.IDX-searchSaved {
+	display: block;
+	padding: 7px 15px;
+	text-decoration: none;
+}
+
+#IDX-searchNavList .IDX-searchNavItem a:hover,
+#IDX-detailsTopLinks div.IDX-topLink a:hover,
+#IDX-prevProp a:hover,
+#IDX-nextProp a:hover {
+	background: #e9e9e9;
+}
+
+#IDX-addressSearch {
+	margin: 0 0 15px;
+}
+
+#IDX-streetNumber,
+#IDX-streetDirection {
+	margin: 0 10px 0 0;
+	width: 70px;
+}
+
+#IDX-IDX-map_infobox_content {
+	background: #f9f9f9;
+	border: none !important;
+	border-bottom: 2px solid #ddd !important;
+}
+
+#IDX-advancedFieldsModLeft {
+	float: left;
+}
+
+#IDX-advancedFieldsModRight {
+	float: right;
+	padding: 0 0 0 10px;
+}
+
+.IDX-advancedSearchColumn {
+	width: 47%;
+}
+
+#IDX-advancedFieldsModLeft .IDX-advancedText,
+#IDX-advancedFieldsModRight .IDX-advancedText {
+	width: 100%;
+}
+
+#IDX-advancedFieldsModLeft select,
+#IDX-advancedFieldsModRight select {
+	height: 75px;
+}
+
+.IDX-advancedSearchColumn .IDX-advancedWrap {
+	margin-bottom: 8px;
+	text-align: left;
+	width: 100%;
+}
+
+.IDX-control-group,
+#IDX-registration .IDX-control-group {
+	display: inline-block;
+	margin: 0;
+	padding: 0 20px 10px 0;
+}
+
+#IDX-city-group {
+	margin: 0;
+	width: 100%;
+}
+
+#IDX-city-group .IDX-controls {
+	width: 100%;
+}
+
+#IDX-ccz-group {
+	width: 100%;
+}
+
+#IDX-submitReset {
+	clear: both;
+	display: block;
+	padding: 10px 0 0;
+}
+
+#IDX-searchRefinement {
+	margin: 0;
+}
+
+#IDX-searchRefinement .IDX-control-group {
+	width: auto;
+}
+
+.IDXC-searchHeader {
+	border-bottom: 1px solid #ccc;
+	color: #777;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0 0 20px;
+	padding: 0 0 3px;
+}
+
+#IDX-main .IDX-formSubmit {
+	font-size: inherit;
+	font-weight: normal;
+	line-height: normal;
+	margin-right: auto;
+}
+
+#IDX-main .IDX-formReset {
+	font-size: inherit;
+	line-height: normal;
+	margin-right: auto;
+}
+
+.IDX-submitContainer {
+	float: left;
+}
+
+.IDX-fieldContainerTitle {
+	background: none repeat scroll 0 0 transparent;
+	margin: 0;
+}
+
+.IDX-advancedPair {
+	padding-top: 10px;
+}
+
+/* top links */
+.IDX-topLinks li {
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 0 10px 0 0;
+}
+
+/* Search page */
+#IDX-advancedSearchFields {
+	clear: left;
+	margin-top: 50px;
+}
+
+.IDX-controls input[type='checkbox'],
+.IDX-page-mortgage input[type='checkbox'] {
+	width: auto;
+}
+
+.IDX-wrapper-standard .IDX-cczList select {
+	height: 230px;
+}
+
+/* Results - (template:default) */
+#IDX-resultsHeader {
+	margin: 0 0 15px;
+	padding: 0;
+}
+
+#IDX-resultsPagerTop {
+	background: none repeat scroll 0 0 #f1f1f1;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	margin: 0;
+	padding: 0;
+}
+
+#IDX-resultsPagerBottom {
+	float: left;
+}
+
+.IDX-perPageForm {
+	padding: 0 0 10px;
+}
+
+#IDX-resultsTopLinks {
+	clear: both;
+	display: inline-block;
+	width: 100%;
+}
+
+#IDX-nextLastPosition {
+	clear: both;
+	display: block;
+	padding: 10px 5px;
+}
+
+#IDX-resultsRefineSortingWrap {
+	margin: 0 1% 1%;
+	width: 48%;
+}
+
+#IDX-refinementClearDiv {
+	clear: both;
+	margin: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+#IDX-resultsRefineSubmitWrap {
+	float: right;
+	width: 48%;
+}
+
+.IDX-refinementSearchRight {
+	display: inline-block;
+	float: right;
+	margin: 0;
+	width: 69%;
+}
+
+.IDX-resultsCell {
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 25px;
+	padding: 5px 5px 25px;
+	position: relative;
+}
+
+.IDX-resultsAddress {
+	font-size: 1.35em;
+	font-weight: bold;
+	height: 1.1em;
+	line-height: 1em;
+	margin-bottom: 0.75%;
+	overflow: hidden;
+}
+
+.IDX-resultsField-price {
+	color: #555;
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 20px;
+	margin-right: 0;
+}
+
+.IDX-resultsContentRight {
+	display: none;
+	float: left;
+	margin-top: 0.5%;
+	width: 70%;
+}
+
+.IDX-resultsContentLeft {
+	float: left;
+	margin-right: 2%;
+	text-align: center;
+	width: 27%;
+}
+
+.IDX-resultsContentTop {
+	float: left;
+	margin-bottom: 5px;
+	width: 70%;
+}
+
+.IDX-resultsContentMain {
+	border-right: medium none;
+	float: left;
+	font-size: 12px;
+	height: 18px;
+	margin-right: 0;
+	min-height: 48px;
+	width: 70%;
+}
+
+.IDX-resultsField-acres {
+	display: none !important;
+}
+
+.IDX-resultsField-sqFt {
+	display: none !important;
+}
+
+.IDX-resultsContentMain div {
+	color: #333;
+	float: left;
+	line-height: 1em;
+	margin: 0 10px 5px 0;
+	padding: 0 10px 0 0;
+}
+
+.IDX-resultsListingInfo {
+	bottom: 25px;
+	left: 29.5%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	text-align: left;
+}
+
+.IDX-resultsListingInfo .IDX-resultsField-listingID {
+	padding: 0 0 3px;
+}
+
+.IDX-resultsPhoto {
+	border: 0.25em solid #fff;
+	box-shadow: 0 0 0.5em rgb(0 0 0 / 20%);
+}
+
+.IDX-resultsPhotoLink {
+	background: none repeat scroll 0 0 #ccc;
+	display: block;
+}
+
+.IDX-resultsListingInfo > .IDX-resultsPhotogallery {
+	/* border-right:1px solid #E5E5E5; */
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 0 10px 0 0;
+}
+
+.IDX-resultsLinks {
+	display: none;
+	float: left;
+}
+
+.IDX-resultsAddressLink {
+	text-decoration: none;
+}
+
+#IDX-resultsRefineSearchWrap {
+	background: none repeat scroll 0 0 #f9f9f9;
+	box-shadow: 0 0 0.5em rgb(0 0 0 / 20%);
+	margin: 7px 0;
+	padding: 10px;
+}
+
+#IDX-resultsRefineSortingWrap label {
+	display: none;
+}
+
+h4.IDX-resultsSeparatorText {
+	clear: both;
+	margin: 10px 0;
+}
+
+#IDX-resultsSeparatorActive {
+	color: #ddd;
+}
+
+.IDX-topLinks {
+	margin: 10px 0 5px;
+}
+
+.IDX-refineCityCountyZip {
+	height: 78px;
+}
+
+.IDX-refinementSearchLeft {
+	display: inline-block;
+	float: left;
+	width: 30%;
+}
+
+.IDX-refinementSearchRight div {
+	float: left;
+	margin: 0 1% 2%;
+	width: 23%;
+}
+
+.IDX-refinementSearchRight div input {
+	display: block;
+	margin: 1% 0;
+	width: 100%;
+}
+
+.IDX-refineCityCountyZipListWrap {
+	float: none;
+	width: 100%;
+}
+
+.IDX-category-results #IDX-resultMap {
+	border: 2px solid #e5e5e5;
+	border-radius: 5px;
+	height: 300px;
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+.IDX-resultsVirtualTour {
+	clear: both;
+	display: none !important;
+	float: none;
+	margin-right: 5%;
+}
+
+a.IDX-resultsPhotoLink {
+	height: 166px;
+	overflow: hidden;
+}
+
+/* Adjust Images per MLS (adjust top margin and width to make image larger and crop out whitespace saved in image files */
+.IDX-resultsPhotoImg {
+	min-height: 127px !important; /* margin:-20px -50%;width:140%;max-width:initial; */
+}
+
+.IDX-resultsListingInfo {
+	clear: both !important;
+}
+
+/* .IDX-resultsMediaLinks{display:none;}
+ */
+
+/* #IDX-resultMap{border:2px solid #E5E5E5;border-radius:5px 5px 5px 5px;height:250px;min-height:250px;min-width:620px;width:620px;}
+*/
+#IDX-searchNavWrapper {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.IDX-btn {
+	margin: 0 10px 10px 0;
+}
+
+/* Profile, Details - (template:default) */
+.IDX-fieldContainerTitle {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0 0 7px;
+	padding: 0 0 3px;
+}
+
+#IDX-detailsContactForm {
+	background: none repeat scroll 0 0 #f5f5f5;
+	border: 1px solid #e9e9e9;
+	border-radius: 5px;
+	margin: 0 0 20px;
+	padding: 10px;
+	text-align: left;
+}
+
+#IDX-moreinfoFormWrap {
+	padding: 0;
+}
+
+#IDX-detailsContactForm .IDX-control-group {
+	width: auto;
+}
+
+.IDX-wrapper-standard #IDX-email {
+	width: auto;
+}
+
+.IDX-leadFormText {
+	display: none;
+}
+
+#IDX-detailsMap {
+	border: 3px solid #e5e5e5;
+	clear: left;
+	height: 300px;
+	min-height: 180px;
+	min-width: 200px;
+	width: 99%;
+}
+
+.IDX-fieldContainer.IDX-fieldTwoColumn .IDX-fieldContainerList div {
+	padding: 0 0 7px;
+}
+
+#IDX-details-row-content {
+	margin: 15px 0 0;
+}
+
+.IDX-detailsAddressLocationInfo {
+	font-size: 1.25em;
+	line-height: 1.25em;
+}
+
+#IDX-detailsPropertyPhoto {
+	background: transparent;
+	border: none;
+	padding: 0;
+}
+
+.IDX-detailsPrice {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.idxb-wide .IDX-detailsPrice {
+	font-size: 21px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#IDX-gridLayoutLeft {
+	float: left;
+	margin-bottom: 2%;
+	width: 60%;
+}
+
+#IDX-gridLayoutRight {
+	display: inline-block;
+	float: right;
+	margin-bottom: 2%;
+	width: 38%;
+}
+
+.idxb-wide #IDX-gridLayoutLeft {
+	float: none;
+	margin-bottom: 2%;
+	width: 100%;
+}
+
+.idxb-wide #IDX-gridLayoutRight {
+	display: inline-block;
+	float: none;
+	margin-bottom: 2%;
+	width: 100%;
+}
+
+.IDX-detailsPhotoWrap {
+	box-shadow: 0 0 0.5em rgb(0 0 0 / 20%);
+	margin: 0 0 3%;
+	padding: 1%;
+}
+
+#IDX-shareThisBar {
+	float: right;
+	margin: 10px 0;
+	text-align: center;
+	width: auto;
+}
+
+#IDX-detailsLinkBar {
+	background-color: #f1f1f1;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	clear: both;
+	margin: 0 0 10px;
+	padding: 5px 10px;
+}
+
+.IDX-detailsLink a {
+	text-decoration: none;
+}
+
+.IDX-summaryFieldLabel {
+	color: #555;
+	min-width: 85px;
+	width: 27%;
+}
+
+.IDX-summaryField {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.IDX-contactFormRight {
+	margin: 20px 0 0;
+}
+
+#IDX-detailscontactFormActions button#IDX-submitBtn,
+#IDX-detailscontactFormActions button#IDX-resetBtn {
+	background: #333 !important;
+}
+
+/* map search page:default template */
+#IDX-main.IDX-page-mapsearch #IDX-mapContainer {
+	min-width: 400px;
+	width: auto;
+}
+
+#IDX-main.IDX-page-mapsearch select,
+#IDX-main.IDX-page-mapsearch textarea,
+#IDX-main.IDX-page-mapsearch input[type='text'] {
+	padding: 5px;
+}
+
+#IDX-main.IDX-page-mapsearch .IDX-mapButton {
+	padding: 0;
+}
+
+#IDX-main.IDX-page-mapsearch #IDX-lp,
+#IDX-main.IDX-page-mapsearch #IDX-hp {
+	background-color: #888;
+	border: 1px solid #111;
+	border-radius: 3px;
+	box-shadow:
+		0 1px 2px rgb(0 0 0 / 10%) inset,
+		0 1px 0 rgb(255 255 255 / 15%);
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 4px 10px;
+	text-shadow: 1px 1px 2px #212121;
+	transition: none 0s ease 0s;
+	width: 90px;
+}
+
+#IDX-main.IDX-page-mapsearch #IDX-lp::placeholder,
+#IDX-main.IDX-page-mapsearch #IDX-hp::placeholder {
+	color: #fff;
+}
+
+#IDX-main.IDX-page-mapsearch #IDX-mapControlContainer {
+	border: 1px solid #ccc;
+}
+
+.content-sidebar #IDX-detailsMap img,
+.sidebar-content #IDX-detailsMap img {
+	max-width: none;
+}
+
+#IDX-userLocationText {
+	color: #fff;
+	padding: 0 0 10px;
+}
+
+/* Search by City */
+#IDX-searchByCityContainer h2 {
+	clear: both;
+	display: block;
+}
+
+#IDX-searchByCityContainer h2 {
+	clear: both;
+	display: block;
+	margin: 0 0 5px;
+}
+
+#IDX-searchByCityContainer > ul {
+	clear: both;
+	display: block;
+	margin: 0 0 20px;
+	overflow: hidden;
+}
+
+.IDX-page-searchbycity .IDX-searchByCityList li {
+	float: left;
+	margin: 0 0 1% 15px;
+	width: 47%;
+}
+
+ul#IDX-homesForSale li {
+	margin: 0 0 1% 15px;
+	width: 98%;
+}
+
+/* Home page showcase (full-width) */
+body.home #wrap .IDX-showcaseCell {
+	background: none repeat scroll 0 0 #f1f1f1;
+	border: 1px solid #fff;
+	border-radius: 1px;
+	box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+	height: 226px;
+	margin: 10px 6px;
+	overflow: hidden;
+	padding: 3px;
+	width: 186px;
+}
+
+body.home #wrap .IDX-showcaseCell img {
+	border: 3px solid #fff;
+	box-shadow: 0 0 0 1px #ddd;
+	display: block;
+	height: 110px;
+	margin: 5px auto;
+	width: 164px;
+}
+
+body.home #wrap .IDX-showcasePrice {
+	background: none repeat scroll 0 0 transparent;
+	clear: both;
+	color: #333;
+	display: block;
+	font-size: 1.75em;
+	margin: 0;
+	padding: 5px 0;
+	text-align: center;
+}
+
+body.home #wrap .IDX-showcaseCell {
+	line-height: 18px;
+}
+
+body.home #wrap .IDX-showcaseAddressElement.IDX-showcaseState {
+	display: inline-block;
+	white-space: pre-wrap;
+}
+
+body.home #wrap .IDX-showcaseAddressElement.IDX-showcaseComma1 {
+	display: none;
+}
+
+body.home #wrap .IDX-showcaseAddressElement.IDX-showcaseCity {
+	clear: both;
+	display: block;
+}
+
+/* Interior page */
+#content.hfeed .IDX-showcaseCell {
+	background: none repeat scroll 0 0 #f1f1f1;
+	border: 1px solid #fff;
+	border-radius: 1px;
+	box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+	height: 215px;
+	margin: 10px 6px;
+	overflow: hidden;
+	padding: 3px;
+}
+
+#content.hfeed .IDX-showcaseCell img {
+	border: 3px solid #fff;
+	box-shadow: 0 0 0 1px #ddd;
+	display: block;
+	height: 110px;
+	margin: 5px auto;
+	width: 164px;
+}
+
+#content.hfeed .IDX-showcasePrice {
+	background: none repeat scroll 0 0 transparent;
+	clear: both;
+	color: #333;
+	display: block;
+	font-size: 1.75em;
+	margin: 0;
+	padding: 5px 0;
+	text-align: center;
+}
+
+#content.hfeed .IDX-showcaseCell {
+	line-height: 18px;
+}
+
+#content.hfeed .IDX-showcaseAddressElement.IDX-showcaseState {
+	display: inline-block;
+	white-space: pre-wrap;
+}
+
+#content.hfeed .IDX-showcaseAddressElement.IDX-showcaseComma1 {
+	display: none;
+}
+
+#content.hfeed .IDX-showcaseAddressElement.IDX-showcaseCity {
+	clear: both;
+	display: block;
+}
+
+.IDX-showcaseContainer {
+	border: 1px solid #e5e5e5 !important;
+	box-shadow: none !important;
+	padding: 0 !important;
+}
+
+/* Home Valuation */
+#IDX-homevaluationContainer.IDX-pageContainer .IDX-control-group {
+	display: block;
+	width: auto;
+}
+
+#IDX-homevaluationContainer.IDX-pageContainer .IDX-controls select {
+	width: auto;
+}
+
+/* Widgets */
+body #IDX-widgetLeadLoginWrapper {
+	border: medium none;
+	box-shadow: none;
+	padding: 0;
+	text-align: left;
+	width: 190px;
+}
+
+body #IDX-widgetLeadLoginHeader h3,
+body #IDX-widgetLeadSignupHeader h3 {
+	font-size: 22px;
+	margin: 0;
+	padding: 0;
+}
+
+body #IDX-widgetLeadLoginHeader br {
+	display: none;
+}
+
+body #LeadSignup {
+	border: medium none;
+	box-shadow: none;
+	padding: 0;
+	text-align: left;
+	width: 250px;
+}
+
+/* Search by Address */
+#IDX-streetName {
+	width: auto;
+}
+
+/* Agent Roster */
+.IDX-rosterDisplayName {
+	clear: both;
+	display: block;
+	margin: 0 0 4px;
+	padding: 0;
+}
+
+a.IDX-rosterCategoryLink {
+	text-decoration: none;
+}
+
+span.IDX-rosterUserTitle {
+	display: block;
+	font-size: smaller;
+	font-weight: lighter;
+	min-height: auto;
+}
+
+h3.IDX-rosterCategoryHeader {
+	display: block;
+}
+
+.IDX-rosterAgentRightColumn.IDX-rosterCategoryRightColumn.IDX-rosterColumn p {
+	margin: 0 0 10px;
+}
+
+.IDX-rosterCategoryPic {
+	float: none;
+	width: 100%;
+}
+
+.IDX-rosterAgentWrap {
+	display: block;
+	height: auto;
+}
+
+#IDX-rosterFilter {
+	border-top: none;
+	padding: 0 0 20px;
+	text-align: left;
+}
+
+.IDX-rosterCategoryTitle {
+	background-color: #f1f1ee;
+	border: medium none;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	padding: 5px 10px;
+}
+
+.IDX-rosterCategory.IDX-rosterAgentWrap:nth-of-type(3n + 1) {
+	clear: left !important;
+}
+
+/* SC MLS */
+.IDX-detailsMLSLogo {
+	bottom: 12px;
+	position: absolute;
+	right: 0;
+}
+
+.IDX-detailsMLSCourtesy {
+	bottom: 0;
+	color: #666;
+	font-size: 10px;
+	left: auto;
+	position: absolute;
+	right: 2px;
+}
+
+#IDX-resultsPagerTop {
+	background: none !important;
+	border: none !important;
+}
+
+.IDX-ccz-radio,
+.IDX-radioInput {
+	width: auto;
+}
+
+.IDX-radio-inline {
+	margin-right: 5px;
+}
+
+/* Map page */
+#IDX-main.IDX-page-mapsearch #IDX-mapContainer {
+	min-width: 265px;
+	overflow: hidden;
+}
+
+#IDX-mapHeader-Search {
+	min-width: 265px;
+}
+
+.IDX-mapControlWindow {
+	min-width: 250px;
+	padding: 20px 20px 48px;
+}
+
+#IDX-criteriaWindowContent #IDX-formSubmit {
+	bottom: 8px;
+	min-width: 32px;
+	padding: inherit;
+	right: 0;
+}
+
+#IDX-mapHeader-Search #IDX-mapTab-criteria {
+}
+
+#IDX-mapHeader-Search {
+	height: auto;
+	min-height: 50px;
+	padding: 0 0 12px;
+}
+
+/* IDX Broker Responsive Showcase .idxb-wide .content #idxb_sct1 .IDX-showcaseCell{width:25%;}
+.home #text-29 .IDX-showcaseCell, .content #idxb_sct1 .IDX-showcaseCell{background:none;border:none;box-shadow:none;display:inline-block !important;height:auto !important;margin:0 !important;min-width:inherit;padding:0;vertical-align:top;width:25%;}
+.content #idxb_sct1 .IDX-showcaseCell{width:33%;}
+.home #text-29 .IDX-showcaseContainer, .content #idxb_sct1 .IDX-showcaseContainer{background:none repeat scroll 0 0 #FFFFFF;border:none;height:auto;margin:0 8px 40px !important;min-width:inherit;padding:0 0 20px;vertical-align:top;width:auto;}
+.home #text-29 .IDX-showcasePhoto, .content #idxb_sct1 .IDX-showcasePhoto{display:block;left:0;max-height:none;max-width:100%;position:absolute;top:0;vertical-align:auto;width:100%;}
+.home #text-29 .IDX-showcaseTable, .content #idxb_sct1 .IDX-showcaseTable{margin:0 !important;}
+.home #text-29 .IDX-showcaseTable{border-spacing:inherit;font-size:inherit;line-height:20px;}
+.home #text-29 .IDX-showcaseAddress.IDX-showcaseAddressElement, .content #idxb_sct1 .IDX-showcaseAddress.IDX-showcaseAddressElement{padding:10px 0 0;}
+.home #text-29 .IDX-showcasePrice{font-size:24px;padding:10px 0 0;}
+.home #text-29 .IDX-showcaseRow, .content #idxb_sct1 .IDX-showcaseRow{display:inline !important;}
+.home #text-29 .IDX-showcaseContainer a, .content #idxb_sct1 .IDX-showcaseContainer a{height:auto !important;overflow:hidden;padding-top:65%;position:relative;background:#eee;}
+.content #idxb_sct1 .IDX-showcaseContainer a{background:#e5e5e5;padding-top:65%;}
+.content #idxb_sct1 .IDX-showcaseTable{border-spacing:8px;font-size:initial;}
+.content #idxb_sct1 .IDX-showcasePhoto{min-height:auto;}
+*/
+.IDX-showcasePhoto {
+	margin: 0;
+}
+
+.IDX-detailsMLSLogo {
+	display: none !important;
+}
+
+.IDX-mlsContainer::after {
+	clear: none !important;
+}
+
+/*  */
+#idxb_sct1 {
+	text-align: center;
+}
+
+.content #idxb_sct1 .IDX-showcaseCell {
+	padding: 8px !important;
+}
+
+.content #idxb_sct1 .IDX-showcaseTable {
+	border-spacing: 8px;
+	font-size: 0.9em;
+	table-layout: fixed;
+}
+
+.content #idxb_sct1 .IDX-showcaseCityStateZip {
+	overflow: hidden;
+	padding: 0 0 0 2%;
+	width: 98%;
+}
+
+.content #idxb_sct1 .IDX-showcaseCell div {
+	background: #f9f9f9;
+}
+
+.content #idxb_sct1 .IDX-showcasePhoto {
+	height: unset;
+	margin: 0;
+	max-height: unset;
+}
+
+.content #idxb_sct1 .IDX-showcaseLink {
+	overflow: hidden;
+}
+
+.content #idxb_sct1 .IDX-showcaseAddress.IDX-showcaseAddressElement {
+	padding-top: 5px;
+}
+
+.content #idxb_sct1 > a {
+	background: #f9f9f9;
+	border: 1px solid #ddd;
+	display: inline-block;
+	max-width: 300px;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+}
+
+.content #idxb_sct1 .IDX-showcasePrice {
+	margin-bottom: 10px;
+}
+
+/* IDX Broker Widgets */
+#IDX-widgetLeadSignupForm input.IDX-LeadSignupInput {
+	max-width: none !important;
+}
+
+#IDX-widgetagentOwner {
+	width: 100% !important;
+}
+
+#IDX-widgetLeadSignupForm input,
+#IDX-widgetLeadSignupForm select,
+#IDX-widgetLeadSignupForm textarea {
+	padding: 10px !important;
+}
+
+#IDX-widgetLeadSignupForm {
+	max-width: none !important;
+}
+
+#IDX-widgetLeadLoginWrapper input[type='text'],
+#IDX-widgetLeadLoginWrapper input[type='password'],
+#IDX-widgetLeadLoginWrapper input[type='email'] {
+	max-width: none !important;
+	padding: 10px;
+}
+
+#IDX-widgetLeadLoginForm {
+	max-width: none !important;
+}
+
+/* IDX Broker Account Manager */
+#IDX-main #IDX-leadInfoFormWrapper input {
+	width: inherit;
+}
+
+#IDX-leadInfoFormWrapper div {
+	margin: 0 0 10px;
+}
+
+/* IDX Broker Miscellaneous */
+#IDX-main .checkbox > input {
+	width: auto;
+}
+
+#IDX-keepLoggedIn {
+	margin: 0 0 20px;
+}
+
+.IDX-radio-inline input {
+	width: auto;
+}
+
+#IDX-homevaluationFormWrap.IDX-leadFormWrap {
+	margin-right: 0;
+	padding: 0;
+}
+
+input.IDX-keepLoggedInCheckBox {
+	width: auto;
+}
+
+.IDX-searchSaved,
+.IDX-propertySaved {
+	background: #444;
+	border-radius: 3px;
+	color: #fff;
+	display: block;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+/* IDX Broker Gallery View */
+.idxb-gallery .IDX-category-results .IDX-resultsCell {
+	border-bottom: none;
+	float: left;
+	margin-bottom: 0;
+	padding: 5px 5px 25px;
+	position: relative;
+	width: 25%;
+}
+
+.idxb-gallery .IDX-category-results .IDX-resultsCell:nth-of-type(4n + 1) {
+	clear: left !important;
+}
+
+.idxb-gallery .IDX-category-results .IDX-resultsContentLeft {
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.idxb-gallery .IDX-category-results .IDX-resultsContentTop {
+	display: inline-block;
+	float: none;
+	margin-bottom: 5px;
+	padding: 0 7px;
+	width: 100%;
+}
+
+.idxb-gallery .IDX-category-results .IDX-resultsAddressStateAbrv,
+.IDX-resultsAddressZip {
+	display: none;
+}
+
+.idxb-gallery .IDX-category-results .IDX-resultsContentMain {
+	border-right: medium none;
+	clear: both;
+	float: none;
+	height: 18px;
+	margin-right: 0;
+	min-height: 88px;
+	padding: 0 7px;
+	width: 100%;
+}
+
+.idxb-gallery .IDX-category-results .IDX-row-content {
+	position: relative;
+}
+
+.idxb-gallery .IDX-category-results .IDX-resultsListingInfo {
+	bottom: 10px;
+	left: 0;
+	margin: 0;
+	padding: 0 7px;
+	position: absolute;
+	text-align: left;
+}
+
+.idxb-gallery .IDX-category-results .IDX-resultsEndAddressCommaTwo {
+	display: none;
+}
+
+.idxb-gallery .IDX-category-results .IDX-contentFooter {
+	clear: both;
+	display: block;
+	overflow: hidden;
+}
+
+.idxb-gallery .IDX-category-results .IDX-cellInnerWrapper {
+	box-shadow: 0 0 0.5em rgb(0 0 0 / 30%);
+	display: inline-table;
+	margin: 3px;
+	padding-bottom: 10px;
+}
+
+.idxb-gallery .IDX-category-results .IDX-resultsPhoto {
+	border: none;
+	box-shadow: none;
+}
+
+/* Mobile first (updates) */
+.IDX-wrapper-standard .IDX-navbar-collapse {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#IDX-main .IDX-navbar-default .IDX-navbar-nav > li > a {
+	color: #333;
+	display: block;
+	padding: 5px 15px;
+	text-decoration: none;
+}
+
+#IDX-main .IDX-navbar-default,
+#IDX-main .IDX-btn-default {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+#IDX-main .IDX-navbar-nav > li,
+#IDX-main #IDX-action-buttons button {
+	background: none repeat scroll 0 0 #f1f1f1;
+	border-color: #eee #ccc #ccc #eee;
+	border-image: none;
+	border-style: solid;
+	border-width: 1px;
+	display: inline-block;
+	float: left;
+	font-size: 1em;
+	line-height: 1em;
+	margin: 0 5px 5px 0;
+	min-width: 125px;
+	padding: 0;
+	text-align: center;
+}
+
+#IDX-main #IDX-action-buttons button,
+#IDX-main #IDX-action-buttons-bottom button {
+	font-size: 1em;
+	line-height: 1em;
+	padding: 8px 15px;
+	width: auto;
+}
+
+.IDX-wrapper-standard button {
+	color: #fff;
+	min-width: 130px;
+	padding: 8px 0;
+}
+
+#IDX-main #IDX-action-buttons button {
+	background: #333;
+	border: 0 none;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 1.25em !important;
+	font-weight: normal;
+	line-height: normal !important;
+	text-transform: none;
+}
+
+button:hover,
+input:hover[type='button'],
+input:hover[type='reset'],
+input:hover[type='submit'],
+.button:hover,
+.entry-content .button:hover,
+.IDX-wrapper-standard button:hover {
+	background-color: #6f737a;
+}
+
+#IDX-main .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
+#IDX-main .IDX-navbar-default .IDX-navbar-nav > li > a:hover {
+	background-color: transparent;
+	color: #333;
+}
+
+#IDX-main .IDX-navbar-default .IDX-navbar-nav > .IDX-active > a,
+#IDX-main .IDX-navbar-default .IDX-navbar-nav > .IDX-active > a:focus,
+#IDX-main .IDX-navbar-default .IDX-navbar-nav > .IDX-active > a:hover {
+	background-color: transparent;
+	color: #333;
+}
+
+#IDX-main.IDX-page-address select,
+#IDX-main.IDX-page-address textarea,
+#IDX-main.IDX-page-address input[type='text'] {
+	background-color: #fff;
+	font-family: arial, sans-serif;
+	padding: 8px;
+}
+
+#IDX-main.IDX-page-address #IDX-addresss-groupd input[type='text'] {
+	border: 1px solid #ddd;
+}
+
+#IDX-main #IDX-action-buttons,
+#IDX-main #IDX-action-buttons-bottom {
+	padding: 5px 0;
+}
+
+.IDX-btn-primary.IDX-active,
+.IDX-btn-primary:active,
+.IDX-btn-primary:focus,
+.IDX-btn-primary:hover,
+.IDX-open > .IDX-btn-primary.IDX-dropdown-toggle {
+	color: #333;
+}
+
+#IDX-main .IDX-control-group {
+	padding: 0 5px 10px;
+}
+
+.IDX-navbar-header {
+	display: none;
+}
+
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-collapse,
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-form {
+	border: none;
+	border-color: transparent;
+	display: block;
+}
+
+.IDX-wrapper-standard .IDX-navbar-nav {
+	margin: 0;
+}
+
+/* misc */
+.IDX-mortgageRow .IDX-mortgageMiddleCell input,
+.IDX-mortgageRow .IDX-mortgageRightCell select {
+	height: initial;
+	line-height: initial;
+}
+
+#IDX-main.IDX-page-mortgage input[type='text'] {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+#IDX-photoGallery .IDX-showcaseContent img {
+	height: auto;
+}
+
+.idx-omnibar-form div.awesomplete > ul > li {
+	line-height: 1;
+}
+
+/* Media Queries---------------------------------------------------------------------------------------------------- */
+@media only screen and (width <= 1139px) {
+	.idxb-gallery .IDX-category-results .IDX-resultsCell {
+		width: 33%;
+	}
+
+	.idxb-gallery .IDX-category-results .IDX-resultsCell:nth-of-type(4n + 1) {
+		clear: none !important;
+	}
+
+	.idxb-gallery .IDX-category-results .IDX-resultsCell:nth-of-type(3n + 1) {
+		clear: left !important;
+	}
+}
+
+@media only screen and (width <= 1023px) {
+	/* IDXBroker modifications */
+	#IDX-main {
+		padding: 0;
+	}
+
+	.home #text-29 .IDX-showcaseCell,
+	.content #idxb_sct1 .IDX-showcaseCell,
+	.idxb-wide .content #idxb_sct1 .IDX-showcaseCell {
+		width: 50%;
+	}
+}
+
+@media only screen and (width <= 767px) {
+	.idxb-gallery .IDX-category-results .IDX-resultsCell {
+		width: 50%;
+	}
+
+	.idxb-gallery .IDX-category-results .IDX-resultsCell:nth-of-type(4n + 1) {
+		clear: none !important;
+	}
+
+	.idxb-gallery .IDX-category-results .IDX-resultsCell:nth-of-type(3n + 1) {
+		clear: none !important;
+	}
+
+	.idxb-gallery .IDX-category-results .IDX-resultsCell:nth-of-type(2n + 1) {
+		clear: left !important;
+	}
+
+	#IDX-mapHeader-Search #IDX-lp-group,
+	#IDX-mapHeader-Search #IDX-hp-group {
+		display: inline-block !important;
+		position: relative !important;
+		right: 0 !important;
+		width: 100px !important;
+	}
+
+	#IDX-mapHeader-Search {
+		text-align: center;
+	}
+}
+
+@media only screen and (width <= 640px) {
+	.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-collapse,
+	.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-form {
+		padding: 0 15px;
+	}
+}
+
+@media only screen and (width <= 600px) {
+	/* IDXBroker modifications */
+	.IDX-wrapper-standard #IDX-cczContainer {
+		float: none;
+	}
+
+	.IDX-resultsContentLeft {
+		float: none;
+		margin-bottom: 15px;
+		margin-right: 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	.IDX-resultsContentLeft {
+		float: none;
+		margin-bottom: 15px;
+		margin-right: 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	.IDX-resultsContentTop {
+		float: none;
+		margin-bottom: 5px;
+		width: 100%;
+	}
+
+	.IDX-resultsListingInfo {
+		bottom: 5px;
+		left: 5px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.IDX-resultsCell {
+		padding: 5px 5px 50px;
+	}
+
+	#IDX-gridLayoutLeft {
+		float: none;
+		margin-bottom: 2%;
+		width: 100%;
+	}
+
+	#IDX-shareThisBar {
+		float: none;
+		margin: 10px 0;
+		text-align: left;
+		width: 100%;
+	}
+
+	#IDX-gridLayoutRight {
+		float: none;
+		margin-bottom: 2%;
+		width: 100%;
+	}
+
+	#IDX-detailsContactForm .IDX-control-group {
+		width: 100%;
+	}
+
+	#IDX-main textarea {
+		min-width: 100%;
+		width: auto;
+	}
+
+	.IDX-fieldTwoColumn .IDX-fieldContainerList {
+		width: 100%;
+	}
+
+	.home #text-29 .IDX-showcaseCell,
+	.content #idxb_sct1 .IDX-showcaseCell,
+	.idxb-wide .content #idxb_sct1 .IDX-showcaseCell {
+		height: auto !important;
+		width: 100%;
+	}
+
+	#IDX-locationWindow {
+		right: 0;
+		width: auto;
+	}
+
+	#IDX-criteriaWindow {
+		right: 0;
+		width: auto;
+	}
+
+	#IDX-map-ccz {
+		height: 59px;
+		position: relative;
+	}
+
+	.IDX-refinementSearchLeft {
+		float: none;
+		margin: 0 0 10px;
+		width: 100%;
+	}
+
+	.IDX-refinementSearchRight {
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+
+	#IDX-resultMap {
+		display: none;
+	}
+
+	.idxb-gallery .IDX-category-results .IDX-resultsCell {
+		width: 100%;
+	}
+
+	.idxb-gallery .IDX-category-results .IDX-resultsCell:nth-of-type(4n + 1) {
+		clear: none !important;
+	}
+
+	.idxb-gallery .IDX-category-results .IDX-resultsCell:nth-of-type(3n + 1) {
+		clear: none !important;
+	}
+
+	.idxb-gallery .IDX-category-results .IDX-resultsCell:nth-of-type(2n + 1) {
+		clear: none !important;
+	}
+
+	#IDX-searchNavList.IDX-listAsRow li,
+	#IDX-detailsTopLinks div.IDX-topLink,
+	#IDX-prevProp,
+	#IDX-nextProp,
+	#IDX-detailsGalleryLink,
+	#IDX-resultsTopLinks .IDX-topLink {
+		float: left;
+		margin: 0 2% 2% 0;
+		width: 48%;
+	}
+
+	.IDX-page-searchbycity .IDX-searchByCityList li {
+		width: 98%;
+	}
+
+	h3.IDX-rosterCategoryHeader {
+		display: block;
+	}
+
+	.IDX-rosterCategoryLeftColumn {
+		display: block;
+		float: none;
+		margin-right: 0;
+		width: 90%;
+	}
+
+	.IDX-rosterCategoryRightColumn {
+		float: none;
+		font-size: 11px;
+		line-height: 12px;
+		padding: 10px 0;
+		width: 90%;
+	}
+
+	.IDX-rosterAgentRightColumn.IDX-rosterCategoryRightColumn.IDX-rosterColumn p {
+		margin: 0 0 10px;
+	}
+
+	.IDX-rosterCategoryPic {
+		float: none;
+		width: 100%;
+	}
+
+	.IDX-rosterCategory {
+		float: left;
+		margin-bottom: 30px;
+		width: 50%;
+	}
+
+	#IDX-submitReset {
+		width: 100%;
+	}
+
+	.IDX-wrapper-standard button {
+		width: 49%;
+	}
+
+	#IDX-main .IDX-navbar-nav > li,
+	#IDX-main #IDX-action-buttons button {
+		margin: 0 2% 5px 0;
+		width: 48%;
+	}
+
+	.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-collapse,
+	.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-form {
+		padding: 0;
+	}
+
+	.IDX-wrapper-standard .IDX-cczList select {
+		width: 100%;
+	}
+
+	.IDX-wrapper-standard .IDX-control-group,
+	.IDX-wrapper-standard #IDX-registration .IDX-control-group {
+		width: 48%;
+	}
+
+	#IDX-main .IDX-control-group {
+		padding: 0 2% 10px;
+	}
+
+	a.IDX-resultsPhotoLink {
+		height: auto !important;
+	}
+
+	#IDX-mapHeader-Search #IDX-mapCount {
+		padding: 15px;
+		position: static;
+		text-align: left;
+		width: 100%;
+	}
+}
+
+@media only screen and (width <= 450px) {
+	/* IDXBroker modifications */
+	.IDX-refinementSearchRight div {
+		float: left;
+		margin: 0 1% 2%;
+		width: 48%;
+	}
+
+	.IDX-rosterCategory {
+		float: none;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+}
+
+@media only screen and (width <= 359px) {
+	/* IDXBroker modifications */
+	#IDX-advancedFieldsModLeft {
+		float: none;
+		width: 100%;
+	}
+
+	#IDX-advancedFieldsModRight {
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	.IDX-wrapper-standard .IDX-control-group,
+	.IDX-wrapper-standard #IDX-registration .IDX-control-group {
+		width: 100%;
+	}
+}

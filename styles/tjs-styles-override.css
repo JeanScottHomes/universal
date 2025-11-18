@@ -1,0 +1,126 @@
+/* MISCELLANEOUS AND TEMPORARY STYLES.CSS OVERRIDE FILE */
+
+/* TJS 02/27/25
+ * NextGEN Gallery Font Color Fix
+ * Forces all gallery text to be black.
+ */
+
+.ngg-gallery-thumbnail span,
+.ngg-gallery-thumbnail a,
+.ngg-gallery-thumbnail div,
+.ngg-gallery-thumbnail p,
+.ngg-gallery-thumbnail figcaption,
+.ngg-gallery-thumbnail,
+.ngg-description,
+.ngg-title,
+.ngg-caption,
+.ngg-gallery-overview p {
+	color: black !important;
+}
+
+/* TJS 03/20/25 - Smooth Scrolling Effect */
+html {
+	scroll-behavior: smooth;
+}
+
+/* TJS 05/08/25 - Scroll Anchor Offset */
+.scroll-anchor {
+	height: 0;
+	position: relative;
+	top: -60px;
+}
+
+/* TJS 08/25/25 - Beige background */
+body {
+	background-color: color-mix(in srgb, rgb(241 234 214), white 67%);
+}
+
+/* TJS 08/25/25 - Remove default white wrappers.
+ * This ensures the beige background shows sitewide across all templates.
+ * Applies to Genesis/child theme containers that normally force white.
+ */
+.site-container,
+.site-inner,
+.content,
+.wrap {
+	background: transparent !important;
+}
+
+/* TJS 08/25/25 - WP Reviews Slider Pro */
+.wprs_unslider {
+	margin: 0 auto !important;
+}
+
+/* TJS 08/31/25 - Post Views Counter: remove unwanted line breaks
+ * The plugin is outputting two <br> tags between the label and count.
+ * Hide them via CSS to normalize display without touching plugin settings.
+ */
+
+.post-views br {
+	display: none !important;
+}
+
+/* TJS 03/20/25
+ * Responsive YouTube Video Styling
+ * Maintains 16:9 aspect ratio.
+ */
+
+.responsive-youtube {
+	height: 0;
+	max-width: 560px;
+	padding-bottom: 56.25%;
+	position: relative;
+	width: 100%;
+}
+
+.responsive-youtube iframe {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/* TJS 03/26/25
+ * Responsive Featured Listing Video
+ */
+
+.video-wrapper {
+	height: 0;
+	max-width: 100%;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+}
+
+.video-wrapper iframe {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.content-sidebar-wrap .content {
+	padding: 0;
+}
+
+/* FRONT PAGE IMAGE TO FULL HEIGHT OF THE VIEW PORT 
+ * From style.css line 123-124 (currently) 
+*/
+
+/* TJS 08/08/25: padding 0 1rem */
+.site-inner {
+	background: #fff;
+	clear: both;
+	padding: 0 1rem;
+}
+
+/* 
+ * TJS 09/05/25 - Unset max-width only on hero picture via custom class
+ * Targets <picture class="img video_poster_mobile keep_active"> 
+ */
+
+.video_bg.cover .video_poster_mobile img {
+	max-width: unset !important;
+}

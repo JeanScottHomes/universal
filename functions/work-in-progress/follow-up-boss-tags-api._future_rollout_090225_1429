@@ -1,0 +1,106 @@
+<?php
+// Load follow-up-boss key file from WP root if present
+if (file_exists(ABSPATH . 'follow-up-boss-tags-key.php')) {
+    require_once ABSPATH . 'follow-up-boss-tags-key.php';
+} else {
+    error_log('follow-up-boss API key file not found.');
+}
+
+$log_file = get_stylesheet_directory() . '/functions/follow-up-boss-tags-api.log';
+
+add_action('template_redirect', function () use ($log_file) {
+    $email     = '';
+    $email_src = 'none';
+    $anon_id   = '';
+    $api_call  = false;
+
+    // 1. Logged-in WP user
+    if (is_user_logged_in()) {
+        $user = wp_get_current_user();
+        if (!empty($user->user_email)) {
+            $email     = $user->user_email;
+            $email_src = 'wp_login';
+        }
+    }
+
+    // 2. URL parameter ?email=
+    if (isset($_GET['email']) && is_email($_GET['email'])) {
+        $email     = sanitize_email($_GET['email']);
+        $email_src = 'url_param';
+        setcookie('follow-up-boss_email', $email, time() + (90 * DAY_IN_SECONDS), COOKIEPATH ?: '/', COOKIE_DOMAIN ?: '', is_ssl(), true);
+        $_COOKIE['follow-up-boss_email'] = $email;
+    }
+
+    // 3. Cookie follow-up-boss_email
+    if (!$email && !empty($_COOKIE['follow-up-boss_email']) && is_email($_COOKIE['follow-up-boss_email'])) {
+        $email     = sanitize_email($_COOKIE['follow-up-boss_email']);
+        $email_src = 'cookie_follow-up-boss_email';
+    }
+
+    // 4. Pixel cookie (example name - adjust to real follow-up-boss cookie name)
+    if (!$email && !empty($_COOKIE['follow-up-boss_email_pixel']) && is_email($_COOKIE['follow-up-boss_email_pixel'])) {
+        $email     = sanitize_email($_COOKIE['follow-up-boss_email_pixel']);
+        $email_src = 'cookie_follow-up-boss_pixel';
+    }
+
+    // 5. Anonymous ID if no email
+    if (!$email) {
+        if (!empty($_COOKIE['follow-up-boss_anon_id'])) {
+            $anon_id = sanitize_text_field($_COOKIE['follow-up-boss_anon_id']);
+        } else {
+            $anon_id = 'anon_' . wp_generate_password(12, false, false);
+            setcookie('follow-up-boss_anon_id', $anon_id, time() + YEAR_IN_SECONDS, COOKIEPATH ?: '/', COOKIE_DOMAIN ?: '', is_ssl(), true);
+            $_COOKIE['follow-up-boss_anon_id'] = $anon_id;
+        }
+    }
+
+    // Tag once per 24 hours if we have an email
+    if ($email && !isset($_COOKIE['follow-up-boss_visit_logged'])) {
+        $api_key = getenv('follow-up-boss_API_KEY') ?: (defined('follow-up-boss_API_KEY') ? follow-up-boss_API_KEY : '');
+        if ($api_key) {
+            $url_visited = home_url(add_query_arg([], $_SERVER['REQUEST_URI']));
+            $data = [
+                "source"  => "https://www.jeanscotthomes.com",
+                "type"    => "Website Visit",
+                "message" => sprintf("Visited: %s", $url_visited),
+                "person"  => [
+                    "emails" => [["value" => $email]],
+                    "tags"   => ["JSH.com Visit"]
+                ]
+            ];
+            $response = wp_remote_post('https://api.followupboss.com/v1/events', [
+                'headers' => [
+                    'Authorization' => 'Basic ' . base64_encode($api_key . ':'),
+                    'Content-Type'  => 'application/json',
+                ],
+                'body'    => wp_json_encode($data),
+                'timeout' => 8,
+            ]);
+            setcookie('follow-up-boss_visit_logged', '1', time() + DAY_IN_SECONDS, COOKIEPATH ?: '/', COOKIE_DOMAIN ?: '', is_ssl(), true);
+            $api_call = true;
+        }
+    }
+
+    // Build log entry for EVERY visit
+    $timestamp = date('Y-m-d H:i:s');
+    $url_visited = home_url(add_query_arg([], $_SERVER['REQUEST_URI']));
+    $log_entry  = "[$timestamp] ";
+    $log_entry .= $email ? "Email: {$email} (src: {$email_src})" : "Anon ID: {$anon_id}";
+    $log_entry .= "\nVisited: {$url_visited}";
+
+    if ($api_call) {
+        if (is_wp_error($response)) {
+            $status  = 'ERROR';
+            $details = $response->get_error_message();
+        } else {
+            $status  = wp_remote_retrieve_response_code($response);
+            $details = wp_remote_retrieve_body($response);
+        }
+        $log_entry .= "\nAPI Status: {$status}\nAPI Response: {$details}";
+    } else {
+        $log_entry .= "\nAPI: No call (no email or within 24h limit)";
+    }
+
+    $log_entry .= "\n" . str_repeat('-', 40) . "\n";
+    file_put_contents($log_file, $log_entry, FILE_APPEND | LOCK_EX);
+});

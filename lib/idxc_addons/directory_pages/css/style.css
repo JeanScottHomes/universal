@@ -1,0 +1,241 @@
+/*
+Directory Page Styles
+*/
+body {
+	background: transparent;
+	display: table;
+	font-size: 22px;
+	height: 100%;
+	margin: 0;
+	width: 100%;
+}
+
+html,
+body,
+h1,
+h3,
+p {
+	color: #fff;
+	font-family: Lato, sans-serif;
+	height: 100%;
+	margin: 0;
+	text-align: center;
+}
+
+/*
+html {
+ height: 100%;
+ background: #ffffff url(https://www.homestahoe.com/wp-content/uploads/2019/01/lake-tahoe-banner.jpg) no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+*/
+.content-sidebar-wrap .content {
+	padding: 0;
+}
+
+.site-inner,
+.wrap,
+.iu_max_wrap {
+	margin: 0;
+	max-width: unset;
+}
+
+.site-container {
+}
+
+.site-inner {
+	background: transparent;
+	padding: 0;
+}
+
+.entry {
+	background-color: transparent;
+	margin-bottom: 0;
+	padding: 0;
+	text-align: center;
+}
+
+/* h1, h3, body, p{font-family:'Open Sans', sans-serif;} */
+#directory_main a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#directory_main a:focus {
+	outline-color: #fff;
+	outline-offset: 2px;
+}
+
+#directory_main a:hover {
+	color: rgb(255 255 255 / 60%);
+}
+
+div#directory_main {
+	display: table;
+	width: 100%;
+}
+
+.directory_wrap {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.entry-content p {
+	line-height: 1.5;
+	margin: 20px;
+	padding: 0;
+}
+
+.content_outer {
+	border: 1px solid #fff;
+	display: inline-block;
+	margin: 35px;
+	max-width: 800px;
+	padding: 12px;
+}
+
+.content_inner {
+	background: rgb(0 0 0 / 65%);
+	padding: 50px;
+}
+
+h1 {
+	font-size: 56px;
+	line-height: 1.15;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+h2 {
+	color: #fff;
+	font-size: 24px;
+	font-weight: 300;
+	letter-spacing: 2.5px;
+	line-height: 1.25;
+	margin: 0 0 20px;
+	text-transform: uppercase;
+}
+
+.main_container {
+	background: rgb(0 0 0 / 39%);
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.main_content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.header_image {
+	border-radius: 50%;
+	display: inline-block;
+	height: 150px;
+	margin-bottom: 7px;
+	overflow: hidden;
+	width: 150px;
+}
+
+.slp_button {
+	border: 1px solid #fff;
+	border-radius: 0;
+	color: #fff;
+	display: block;
+	font-size: 20px;
+	margin: 12px auto;
+	max-width: 415px;
+	padding: 10px 30px;
+	text-decoration: none;
+
+	/* font-weight: bold; */
+}
+
+x.social_icons i {
+	background: #fff;
+	border-radius: 50%;
+	color: #333;
+	height: 50px;
+
+	/* padding: 20px; */
+	margin: 15px;
+	width: 50px;
+}
+
+.icon_circle {
+	background: #fff;
+	border-radius: 50%;
+	display: inline-table;
+	height: 40px;
+	margin: 10px;
+	padding: 4px;
+	width: 40px;
+}
+
+.contact_icons i,
+.social_icons i {
+	color: #333;
+	display: table-cell;
+	font-size: 24px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.footer_area {
+	padding: 35px 0 20px;
+}
+
+.footer_area img {
+	max-width: 100%;
+}
+
+.slp_buttons {
+	padding: 20px 0;
+}
+
+.disclaimer p {
+	color: #ddd;
+	font-size: 18px;
+}
+
+@media only screen and (width <= 768px) {
+	body {
+		font-size: 18px;
+	}
+
+	h1 {
+		font-size: 36px;
+	}
+
+	h2 {
+		font-size: 18px;
+	}
+
+	.header_image {
+		border-radius: 50%;
+		display: inline-block;
+		height: 100px;
+		margin-bottom: 7px;
+		overflow: hidden;
+		width: 100px;
+	}
+}
+
+@media only screen and (width <= 600px) {
+	.content_outer {
+		margin: 5px;
+	}
+
+	.content_inner {
+		padding: 35px 25px;
+	}
+}
+
+/* Misc */
+
+/* Media Queries */
+@media only screen and (width <= 767px) {
+}
