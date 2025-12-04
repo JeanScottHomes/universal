@@ -1,0 +1,60 @@
+ 
+[28-Nov-2025 08:56:07]  pid 1020
+script_filename = /www/.wordpress/wp-admin/post.php
+[0x00007e59d8c15740] curl_exec() /wordpress/wp-includes/Requests/src/Transport/Curl.php:204
+[0x00007e59d8c15660] request() /wordpress/wp-includes/Requests/src/Requests.php:469
+[0x00007e59d8c15560] request() /wordpress/wp-includes/class-wp-http.php:415
+[0x00007e59d8c153d0] request() /wordpress/wp-includes/http.php:158
+[0x00007e59d8c15340] wp_remote_request() /www/wp-content/plugins/cloudflare/src/WordPress/WordPressClientAPI.php:168
+[0x00007e59d8c15260] sendRequest() /www/wp-content/plugins/cloudflare/src/WordPress/WordPressClientAPI.php:140
+[0x00007e59d8c151e0] callAPI() /www/wp-content/plugins/cloudflare/src/WordPress/WordPressClientAPI.php:65
+[0x00007e59d8c15120] zonePurgeFiles() /www/wp-content/plugins/cloudflare/src/WordPress/Hooks.php:222
+[0x00007e59d8c14f90] purgeCacheByRelevantURLs() /www/wp-content/plugins/cloudflare/src/WordPress/Hooks.php:448
+[0x00007e59d8c14ed0] purgeCacheOnPostStatusChange() /wordpress/wp-includes/class-wp-hook.php:324
+[0x00007e59d8c14df0] apply_filters() /wordpress/wp-includes/class-wp-hook.php:348
+[0x00007e59d8c14d80] do_action() /wordpress/wp-includes/plugin.php:517
+[0x00007e59d8c14c70] do_action() /wordpress/wp-includes/post.php:5740
+[0x00007e59d8c14b40] wp_transition_post_status() /wordpress/wp-includes/post.php:5000
+[0x00007e59d8c146e0] wp_insert_post() /wordpress/wp-includes/post.php:5212
+[0x00007e59d8c145e0] wp_update_post() /wordpress/wp-admin/includes/post.php:453
+[0x00007e59d8c136f0] edit_post() /wordpress/wp-admin/post.php:227
+ 
+[28-Nov-2025 11:58:32]  pid 1160
+script_filename = /www/.wordpress/wp-admin/post.php
+[0x00007e59d8c158e0] mysqli_query() /wordpress/wp-includes/class-wpdb.php:2351
+[0x00007e59d8c15870] _do_query() /wordpress/wp-includes/class-wpdb.php:2265
+[0x00007e59d8c15790] query() /wordpress/wp-includes/class-wpdb.php:3146
+[0x00007e59d8c156a0] get_results() /wordpress/wp-includes/meta.php:1189
+[0x00007e59d8c154a0] update_meta_cache() /wordpress/wp-includes/meta.php:659
+[0x00007e59d8c151e0] get_metadata_raw() /wordpress/wp-includes/meta.php:248
+[0x00007e59d8c15000] update_metadata() /wordpress/wp-includes/post.php:2697
+[0x00007e59d8c14f50] update_post_meta() /www/wp-content/plugins/wordpress-seo/inc/class-wpseo-meta.php:673
+[0x00007e59d8c14eb0] set_value() /www/wp-content/plugins/wordpress-seo/admin/metabox/class-metabox.php:768
+[0x00007e59d8c14da0] save_postdata() /wordpress/wp-includes/class-wp-hook.php:326
+[0x00007e59d8c14cc0] apply_filters() /wordpress/wp-includes/class-wp-hook.php:348
+[0x00007e59d8c14c50] do_action() /wordpress/wp-includes/plugin.php:517
+[0x00007e59d8c14b40] do_action() /wordpress/wp-includes/post.php:5121
+[0x00007e59d8c146e0] wp_insert_post() /wordpress/wp-includes/post.php:5212
+[0x00007e59d8c145e0] wp_update_post() /wordpress/wp-admin/includes/post.php:453
+[0x00007e59d8c136f0] edit_post() /wordpress/wp-admin/post.php:227
+ 
+[28-Nov-2025 23:46:11]  pid 1930
+script_filename = /www/index.php
+[0x00007e59d8c135b0] curl_exec() /wordpress/wp-includes/Requests/src/Transport/Curl.php:204
+[0x00007e59d8c134d0] request() /wordpress/wp-includes/Requests/src/Requests.php:469
+[0x00007e59d8c133d0] request() /wordpress/wp-includes/class-wp-http.php:415
+[0x00007e59d8c13240] request() /wordpress/wp-includes/class-wp-http.php:656
+[0x00007e59d8c131a0] get() /wordpress/wp-includes/http.php:177
+[0x00007e59d8c13110] wp_remote_get() /www/wp-content/plugins/optima-express/iHomefinderRequestor.php:126
+[0x00007e59d8c12f40] remoteGetRequest() /www/wp-content/plugins/optima-express/virtualPage/iHomefinderListingDetailVirtualPageImpl.php:66
+[0x00007e59d8c12eb0] getContent() /www/wp-content/plugins/optima-express/iHomefinderVirtualPageDispatcher.php:58
+[0x00007e59d8c12e10] initialize() /www/wp-content/plugins/optima-express/iHomefinderVirtualPageDispatcher.php:135
+[0x00007e59d8c12d80] postCleanUp() /wordpress/wp-includes/class-wp-hook.php:326
+[0x00007e59d8c12ca0] apply_filters() /wordpress/wp-includes/plugin.php:256
+[0x00007e59d8c12bd0] apply_filters_ref_array() /wordpress/wp-includes/class-wp-query.php:3620
+[0x00007e59d8c12310] get_posts() /wordpress/wp-includes/class-wp-query.php:3949
+[0x00007e59d8c122a0] query() /wordpress/wp-includes/class-wp.php:701
+[0x00007e59d8c12230] query_posts() /wordpress/wp-includes/class-wp.php:821
+[0x00007e59d8c121a0] main() /wordpress/wp-includes/functions.php:1342
+[0x00007e59d8c12100] wp() /wordpress/wp-blog-header.php:16
+[0x00007e59d8c12070] [INCLUDE_OR_EVAL]() /www/index.php:17

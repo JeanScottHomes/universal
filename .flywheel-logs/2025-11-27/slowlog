@@ -1,0 +1,58 @@
+ 
+[27-Nov-2025 08:25:38]  pid 12673
+script_filename = /www/index.php
+[0x00007d161e2135b0] curl_exec() /wordpress/wp-includes/Requests/src/Transport/Curl.php:204
+[0x00007d161e2134d0] request() /wordpress/wp-includes/Requests/src/Requests.php:469
+[0x00007d161e2133d0] request() /wordpress/wp-includes/class-wp-http.php:415
+[0x00007d161e213240] request() /wordpress/wp-includes/class-wp-http.php:656
+[0x00007d161e2131a0] get() /wordpress/wp-includes/http.php:177
+[0x00007d161e213110] wp_remote_get() /www/wp-content/plugins/optima-express/iHomefinderRequestor.php:126
+[0x00007d161e212f40] remoteGetRequest() /www/wp-content/plugins/optima-express/virtualPage/iHomefinderListingDetailVirtualPageImpl.php:66
+[0x00007d161e212eb0] getContent() /www/wp-content/plugins/optima-express/iHomefinderVirtualPageDispatcher.php:58
+[0x00007d161e212e10] initialize() /www/wp-content/plugins/optima-express/iHomefinderVirtualPageDispatcher.php:135
+[0x00007d161e212d80] postCleanUp() /wordpress/wp-includes/class-wp-hook.php:326
+[0x00007d161e212ca0] apply_filters() /wordpress/wp-includes/plugin.php:256
+[0x00007d161e212bd0] apply_filters_ref_array() /wordpress/wp-includes/class-wp-query.php:3620
+[0x00007d161e212310] get_posts() /wordpress/wp-includes/class-wp-query.php:3949
+[0x00007d161e2122a0] query() /wordpress/wp-includes/class-wp.php:701
+[0x00007d161e212230] query_posts() /wordpress/wp-includes/class-wp.php:821
+[0x00007d161e2121a0] main() /wordpress/wp-includes/functions.php:1342
+[0x00007d161e212100] wp() /wordpress/wp-blog-header.php:16
+[0x00007d161e212070] [INCLUDE_OR_EVAL]() /www/index.php:17
+ 
+[27-Nov-2025 08:25:50]  pid 12674
+script_filename = /www/index.php
+[0x00007d161e2135b0] curl_exec() /wordpress/wp-includes/Requests/src/Transport/Curl.php:204
+[0x00007d161e2134d0] request() /wordpress/wp-includes/Requests/src/Requests.php:469
+[0x00007d161e2133d0] request() /wordpress/wp-includes/class-wp-http.php:415
+[0x00007d161e213240] request() /wordpress/wp-includes/class-wp-http.php:656
+[0x00007d161e2131a0] get() /wordpress/wp-includes/http.php:177
+[0x00007d161e213110] wp_remote_get() /www/wp-content/plugins/optima-express/iHomefinderRequestor.php:126
+[0x00007d161e212f40] remoteGetRequest() /www/wp-content/plugins/optima-express/virtualPage/iHomefinderListingDetailVirtualPageImpl.php:66
+[0x00007d161e212eb0] getContent() /www/wp-content/plugins/optima-express/iHomefinderVirtualPageDispatcher.php:58
+[0x00007d161e212e10] initialize() /www/wp-content/plugins/optima-express/iHomefinderVirtualPageDispatcher.php:135
+[0x00007d161e212d80] postCleanUp() /wordpress/wp-includes/class-wp-hook.php:326
+[0x00007d161e212ca0] apply_filters() /wordpress/wp-includes/plugin.php:256
+[0x00007d161e212bd0] apply_filters_ref_array() /wordpress/wp-includes/class-wp-query.php:3620
+[0x00007d161e212310] get_posts() /wordpress/wp-includes/class-wp-query.php:3949
+[0x00007d161e2122a0] query() /wordpress/wp-includes/class-wp.php:701
+[0x00007d161e212230] query_posts() /wordpress/wp-includes/class-wp.php:821
+[0x00007d161e2121a0] main() /wordpress/wp-includes/functions.php:1342
+[0x00007d161e212100] wp() /wordpress/wp-blog-header.php:16
+[0x00007d161e212070] [INCLUDE_OR_EVAL]() /www/index.php:17
+Report liveness duration not set, setting default: 1h
+log writer channel closed, waiting for the logger to finish...
+finished writing log messages to stdout, exiting
+ 
+[27-Nov-2025 08:49:08]  pid 53
+script_filename = /www/index.php
+[0x00007e59d8c15800] file_exists() /www/wp-content/plugins/wp-sheet-editor-premium/modules/init.php:104
+[0x00007e59d8c156c0] init() /wordpress/wp-includes/class-wp-hook.php:324
+[0x00007e59d8c155e0] apply_filters() /wordpress/wp-includes/class-wp-hook.php:348
+[0x00007e59d8c15570] do_action() /wordpress/wp-includes/plugin.php:517
+[0x00007e59d8c15490] do_action() /wordpress/wp-settings.php:581
+[0x00007e59d8c15290] [INCLUDE_OR_EVAL]() /www/wp-config.php:110
+[0x00007e59d8c15210] [INCLUDE_OR_EVAL]() /wordpress/wp-config.php:5
+[0x00007e59d8c151a0] [INCLUDE_OR_EVAL]() /wordpress/wp-load.php:50
+[0x00007e59d8c15100] [INCLUDE_OR_EVAL]() /wordpress/wp-blog-header.php:13
+[0x00007e59d8c15070] [INCLUDE_OR_EVAL]() /www/index.php:17
