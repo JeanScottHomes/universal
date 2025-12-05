@@ -236,6 +236,10 @@ function idxcentral_enqueue_scripts()
   wp_enqueue_script('jarallax_video', get_bloginfo('stylesheet_directory') . '/lib/js/jarallax/jarallax-video.js', array('jquery'), CHILD_THEME_VERSION);
   wp_enqueue_script('idx-js-ihf', '//cdn.idxcentral.net/assets/ihomefinder/js-ihf-core.js', array(), CHILD_THEME_VERSION); // iHomefinder
   //wp_enqueue_script( 'idx-js-idxb', '//cdn.idxcentral.net/assets/idxbroker/js-idxb.js', array(), CHILD_THEME_VERSION ); // IDX Broker
+
+  // 🔹 TJS - Local Contact CTA Popup
+  wp_enqueue_script('jsh-contact-cta', get_stylesheet_directory_uri() . '/scripts/footer/contact-cta.js', array(), CHILD_THEME_VERSION, true);
+  wp_enqueue_style('jsh-contact-cta-style', get_stylesheet_directory_uri() . '/styles/contact-cta.css', array(), CHILD_THEME_VERSION);
 }
 
 // 🔧 Route Featured Listings single template from /templates/
